@@ -21,81 +21,99 @@ import OrderOnlineHome from '../layout/home/OrderOnlineHome';
 import ImageSlider from '../layout/home/ImageSlider';
 import PartyAndCatering from '../layout/home/PartyAndCatering';
 import FooterBungalow from '../layout/home/FooterBungalow';
+import { ThemeContext } from '../../contexts/ThemeContext';
 
 const HomePage = () => {
+	
 	return (
-		<div>
-			<Hero />
+		<ThemeContext.Consumer>
+			{(context) => {
+				const { isLightTheme, light, dark } = context;
+				const theme = isLightTheme ? light : dark;
+			
+				return (
+					<div style={{display: 'flex' , flexDirection: 'column'}}>
+						<Hero />
 
-			<OdeToFood />
+						<OdeToFood />
 
-			<div
-				style={{
-					backgroundColor: '#121212',
-					paddingTop: '40px',
-					alignItems: 'center',
-					justifyContent: 'center',
-					display: 'flex',
-					flexDirection: 'column'
-				}}
-			>
-				<OrderOnlineHome />
+						<div
+							style={{
+								backgroundColor: theme.bg,
+								paddingTop: '40px',
+								alignItems: 'center',
+								justifyContent: 'center',
+								display: 'flex',
+								flexDirection: 'column'
+							}}
+						>
+							<OrderOnlineHome />
 
-				<ImageSlider />
+							<ImageSlider />
 
-				<PartyAndCatering />
+							<PartyAndCatering />
 
-				<div style={{ marginTop: '67px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-					<Typography variant="h2" align="center" style={{ color: 'tomato' }}>
-						Testimonials
-					</Typography>
-					<Typography variant="subtitle2" style={{ color: 'white' }}>
-						<br />
-						<br />
-						The love and the kind words of appreciation is really the secret ingredient of our success and
-						the key reason for us to comeback.
-					</Typography>
-					<div
-						style={{
-							display: 'flex',
-							flexDirection: 'row',
-							width: '55vw',
-							margin: '20px',
-							marginBottom: '30px'
-						}}
-					>
-						<Paper style={{ backgroundColor: '#444', padding: '20px', margin: '20px' }}>
-							<Typography style={{ color: 'white' }}>
-								For a vegetarian buffet Lunch I think this is one of the best places. The services is
-								also very impressive
-							</Typography>
-							<div>
-								<Avatar style={{ backgroundColor: 'tomato', margin: '10px' }}>KS</Avatar>
+							<div
+								style={{
+									marginTop: '67px',
+									display: 'flex',
+									flexDirection: 'column',
+									alignItems: 'center'
+								}}
+							>
+								<Typography variant="h2" align="center" style={{ color: 'tomato' }}>
+									Testimonials
+								</Typography>
+								<Typography variant="subtitle2" style={{  color: theme.syntax }}>
+									<br />
+									<br />
+									The love and the kind words of appreciation is really the secret ingredient of our
+									success and the key reason for us to comeback.
+								</Typography>
+								<div
+									style={{
+										display: 'flex',
+										flexDirection: 'row',
+										width: '55vw',
+										margin: '20px',
+										marginBottom: '30px'
+									}}
+								>
+									<Paper style={{ backgroundColor: theme.paper, padding: '20px', margin: '20px' }}>
+										<Typography style={{ color: theme.syntax }}>
+											For a vegetarian buffet Lunch I think this is one of the best places. The
+											services is also very impressive
+										</Typography>
+										<div>
+											<Avatar style={{ backgroundColor: 'tomato', margin: '10px' }}>KS</Avatar>
+										</div>
+									</Paper>
+									<Paper style={{ backgroundColor: theme.paper, padding: '20px', margin: '20px' }}>
+										<Typography style={{  color: theme.syntax }}>
+											For a vegetarian buffet Lunch I think this is one of the best places. The
+											services is also very impressive
+										</Typography>
+										<div>
+											<Avatar style={{ backgroundColor: 'tomato', margin: '10px' }}>MD</Avatar>
+										</div>
+									</Paper>
+									<Paper style={{ backgroundColor: theme.paper, padding: '20px', margin: '20px' }}>
+										<Typography style={{ color: theme.syntax }}>
+											For a vegetarian buffet Lunch I think this is one of the best places. The
+											services is also very impressive
+										</Typography>
+										<div>
+											<Avatar style={{ backgroundColor: 'tomato', margin: '10px' }}>PS</Avatar>
+										</div>
+									</Paper>
+								</div>
 							</div>
-						</Paper>
-						<Paper style={{ backgroundColor: '#444', padding: '20px', margin: '20px' }}>
-							<Typography style={{ color: 'white' }}>
-								For a vegetarian buffet Lunch I think this is one of the best places. The services is
-								also very impressive
-							</Typography>
-							<div>
-								<Avatar style={{ backgroundColor: 'tomato', margin: '10px' }}>MD</Avatar>
-							</div>
-						</Paper>
-						<Paper style={{ backgroundColor: '#444', padding: '20px', margin: '20px' }}>
-							<Typography style={{ color: 'white' }}>
-								For a vegetarian buffet Lunch I think this is one of the best places. The services is
-								also very impressive
-							</Typography>
-							<div>
-								<Avatar style={{ backgroundColor: 'tomato', margin: '10px' }}>PS</Avatar>
-							</div>
-						</Paper>
+						</div>
+						<FooterBungalow />
 					</div>
-				</div>
-			</div>
-			<FooterBungalow />
-		</div>
+				);
+			}}
+		</ThemeContext.Consumer>
 	);
 };
 

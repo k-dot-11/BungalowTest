@@ -7,9 +7,12 @@ import Typography from '@material-ui/core/Typography';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import HomePage from './components/screens/HomePage';
 import SignInPage from './components/screens/auth/SignInPage';
+import AboutPage from './components/screens/AboutPage';
 import SignUpPage from './components/screens/auth/SignUpPage';
 import UserProvider from './providers/UserProvider';
 import { auth } from './firebase/firebase';
+import ThemeContextProvider from './contexts/ThemeContext';
+
 
 function App() {
 	useEffect(() => {
@@ -19,6 +22,7 @@ function App() {
 	}, []);
 
 	return (
+		<ThemeContextProvider>
 		<UserProvider>
 			<Router>
 				<div className="App" style={{ display: 'flex', flexDirection: 'column' }}>
@@ -38,7 +42,7 @@ function App() {
 								<Button href="#" color="primary" variant="text" style={styles.navLinks}>
 									Order Online
 								</Button>
-								<Button href="#" color="primary" variant="text" style={styles.navLinks}>
+								<Button href="/about" color="primary" variant="text" style={styles.navLinks}>
 									About
 								</Button>
 								<Button href="/signin" color="white" variant="outlined" style={styles.loginButton}>
@@ -54,7 +58,9 @@ function App() {
 						<Route path="/signup">
 							<SignUpPage />
 						</Route>
-
+						<Route path="/about">
+							<AboutPage />
+						</Route>
 						<Route path="/">
 							<HomePage />
 						</Route>
@@ -62,6 +68,7 @@ function App() {
 				</div>
 			</Router>
 		</UserProvider>
+		</ThemeContextProvider>
 	);
 }
 

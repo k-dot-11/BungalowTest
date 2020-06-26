@@ -3,7 +3,7 @@ import {Paper , Typography , Button} from '@material-ui/core';
 
 const PartyAndCatering = () => {
     return (
-        <Paper style={{ backgroundColor: '#444444', display: 'flex', flexDirection: 'column', height: '60vw' }}>
+        <Paper elevation = {4} style={{  display: 'flex', flexDirection: 'column', height: '60vw' }}>
         <div
             style={{
                 flex: 1,
