@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import {
 	Grid,
 	Card,
@@ -7,16 +7,18 @@ import {
 	Button,
 	Container,
 	CardActions,
-    CardMedia,
-    Tabs,
-    Tab,
-    AppBar,
+	CardMedia,
+	Tabs,
+	Tab,
+	AppBar,
 	CircularProgress
 } from '@material-ui/core';
 import { firestore } from '../../../firebase/firebase';
+import { ThemeContext } from '../../../contexts/ThemeContext';
 
 const MenuScreen = () => {
-	const cards = [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ];
+	const { isLightTheme, light, dark } = useContext(ThemeContext);
+	const theme = isLightTheme ? light : dark;
 
 	const [ menuItems, setMenuItems ] = useState([]);
 	const [ loading, setLoading ] = useState(true);
@@ -46,11 +48,12 @@ const MenuScreen = () => {
 	if (loading) return <CircularProgress />;
 
 	return (
-		<Container maxWidth="md">
-			<Grid container spacing={4} style = {{marginTop:'30px'}}>
+        <div style = {{display: 'flex' , flexDirection: 'column' , width: '99vw' , backgroundColor:theme.bg}}>
+		<Container maxWidth="md" style = {{backgroundColor:theme.bg}}>
+			<Grid container spacing={4} style={{ marginTop: '30px' }}>
 				{menuItems.map((item) => (
 					<Grid item key={item.name} xs={12} sm={6} md={4}>
-						<Card elevation={5} style = {{padding:'10px' , backgroundColor:'#fefefe'}}>
+						<Card elevation={5} style={{ padding: '10px', backgroundColor: theme.paper }}>
 							<CardMedia
 								image="https://source.unsplash.com/1920x1080/?curry"
 								title="Image title"
@@ -64,7 +67,7 @@ const MenuScreen = () => {
 									{item.price}
 									<br />
 								</Typography>
-								<Typography>{item.description}</Typography>
+								<Typography style={{ color: theme.syntax }}>{item.description}</Typography>
 							</CardContent>
 							<CardActions>
 								<Button size="small" color="primary">
@@ -79,6 +82,7 @@ const MenuScreen = () => {
 				))}
 			</Grid>
 		</Container>
+        </div>
 	);
 };
 
