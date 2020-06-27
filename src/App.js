@@ -6,10 +6,10 @@ import SignInPage from './components/screens/auth/SignInPage';
 import AboutPage from './components/screens/AboutPage';
 import SignUpPage from './components/screens/auth/SignUpPage';
 import UserProvider from './providers/UserProvider';
+import MenuScreen from './components/screens/menu/MenuScreen';
 import { auth } from './firebase/firebase';
-import Navbar from './components/layout/navbar/Navbar'
+import Navbar from './components/layout/navbar/Navbar';
 import ThemeContextProvider from './contexts/ThemeContext';
-
 
 function App() {
 	useEffect(() => {
@@ -33,6 +33,9 @@ function App() {
 						<Route path="/about">
 							<AboutPage />
 						</Route>
+						<Route path="/menu">
+							<MenuScreen />
+						</Route>
 						<Route path="/">
 							<HomePage />
 						</Route>
@@ -42,7 +45,5 @@ function App() {
 		</ThemeContextProvider>
 	);
 }
-
-
 
 export default App;

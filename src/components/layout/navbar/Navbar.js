@@ -3,7 +3,6 @@ import { Button, Link, Grid, Card, CardMedia, CardContent, CardActions } from '@
 import AppBar from '@material-ui/core/AppBar';
 import LocalPizzaIcon from '@material-ui/icons/LocalPizza';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import { ThemeContext } from '../../../contexts/ThemeContext';
 const Navbar = () => {
 	return (
@@ -33,6 +32,9 @@ const Navbar = () => {
 
 					loginButton: {
 						marginLeft: '15px',
+						borderColor:'white',
+						borderWidth: '1/2px',
+						borderRadius:'20px',
 						color: 'white'
 					}
 				};
@@ -47,7 +49,7 @@ const Navbar = () => {
 								<Button href="/" color="primary" variant="text" style={styles.navLinks}>
 									Home
 								</Button>
-								<Button href="/" color="primary" variant="text" style={styles.navLinks}>
+								<Button href="/menu" color="primary" variant="text" style={styles.navLinks}>
 									Menu
 								</Button>
 								<Button
@@ -61,7 +63,7 @@ const Navbar = () => {
 								<Button href="/about" color="primary" variant="text" style={styles.navLinks}>
 									About
 								</Button>
-								<Button href="/signin" color="white" variant="outlined" style={styles.loginButton}>
+								<Button href="/signin" color="primary" variant="outlined" style={styles.loginButton}>
 									Sign in
 								</Button>
 							</nav>
