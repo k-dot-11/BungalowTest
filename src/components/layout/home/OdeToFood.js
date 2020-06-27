@@ -13,7 +13,7 @@ const OdeToFood = () => {
 				return (
 					<div style={{ backgroundColor: theme.bg, padding: '15px' }}>
 						<Container style={{ flex: 10, paddingRight: '20px', paddingLeft: '20px' }} maxWidth="md">
-							<Paper elevation={8} style={{ backgroundColor: 'tomato', padding: '60px' }}>
+							<Paper elevation={8} style={{ backgroundColor: theme.primary, padding: '60px' }}>
 								<Typography variant="body1" style={{ color: 'white' }} gutterBottom align="center">
 									The award winning vegetarian restaurant that you cherished for long is now back in
 									an all new format, delivering deliciousness directly to your doorstep. Come, join us

@@ -24,15 +24,14 @@ import FooterBungalow from '../layout/home/FooterBungalow';
 import { ThemeContext } from '../../contexts/ThemeContext';
 
 const HomePage = () => {
-	
 	return (
 		<ThemeContext.Consumer>
 			{(context) => {
 				const { isLightTheme, light, dark } = context;
 				const theme = isLightTheme ? light : dark;
-			
+
 				return (
-					<div style={{display: 'flex' , flexDirection: 'column'}}>
+					<div style={{ display: 'flex', flexDirection: 'column' }}>
 						<Hero />
 
 						<OdeToFood />
@@ -61,10 +60,10 @@ const HomePage = () => {
 									alignItems: 'center'
 								}}
 							>
-								<Typography variant="h2" align="center" style={{ color: 'tomato' }}>
+								<Typography variant="h2" align="center" style={{ color: theme.primary }}>
 									Testimonials
 								</Typography>
-								<Typography variant="subtitle2" style={{  color: theme.syntax }}>
+								<Typography variant="subtitle2" style={{ color: theme.syntax }}>
 									<br />
 									<br />
 									The love and the kind words of appreciation is really the secret ingredient of our
@@ -85,16 +84,9 @@ const HomePage = () => {
 											services is also very impressive
 										</Typography>
 										<div>
-											<Avatar style={{ backgroundColor: 'tomato', margin: '10px' }}>KS</Avatar>
-										</div>
-									</Paper>
-									<Paper style={{ backgroundColor: theme.paper, padding: '20px', margin: '20px' }}>
-										<Typography style={{  color: theme.syntax }}>
-											For a vegetarian buffet Lunch I think this is one of the best places. The
-											services is also very impressive
-										</Typography>
-										<div>
-											<Avatar style={{ backgroundColor: 'tomato', margin: '10px' }}>MD</Avatar>
+											<Avatar style={{ backgroundColor: theme.primary, margin: '10px' }}>
+												KS
+											</Avatar>
 										</div>
 									</Paper>
 									<Paper style={{ backgroundColor: theme.paper, padding: '20px', margin: '20px' }}>
@@ -103,7 +95,20 @@ const HomePage = () => {
 											services is also very impressive
 										</Typography>
 										<div>
-											<Avatar style={{ backgroundColor: 'tomato', margin: '10px' }}>PS</Avatar>
+											<Avatar style={{ backgroundColor: theme.primary, margin: '10px' }}>
+												MD
+											</Avatar>
+										</div>
+									</Paper>
+									<Paper style={{ backgroundColor: theme.paper, padding: '20px', margin: '20px' }}>
+										<Typography style={{ color: theme.syntax }}>
+											For a vegetarian buffet Lunch I think this is one of the best places. The
+											services is also very impressive
+										</Typography>
+										<div>
+											<Avatar style={{ backgroundColor: theme.primary, margin: '10px' }}>
+												PS
+											</Avatar>
 										</div>
 									</Paper>
 								</div>
@@ -112,33 +117,32 @@ const HomePage = () => {
 						<FooterBungalow />
 					</div>
 				);
+				const styles = {
+					heroTitle: {
+						color: 'white'
+					},
+
+					heroButtons: {
+						padding: '20px'
+					},
+
+					heroButton: {
+						marginRight: '10px',
+						marginLeft: '10px',
+						backgroundColor: theme.primary,
+						color: 'white'
+					},
+					cardMedia: {
+						paddingTop: '56.25%' // 16:9
+					},
+					socialIcon: {
+						color: 'white',
+						margin: '10px'
+					}
+				};
 			}}
 		</ThemeContext.Consumer>
 	);
-};
-
-const styles = {
-	heroTitle: {
-		color: 'white'
-	},
-
-	heroButtons: {
-		padding: '20px'
-	},
-
-	heroButton: {
-		marginRight: '10px',
-		marginLeft: '10px',
-		backgroundColor: 'tomato',
-		color: 'white'
-	},
-	cardMedia: {
-		paddingTop: '56.25%' // 16:9
-	},
-	socialIcon: {
-		color: 'white',
-		margin: '10px'
-	}
 };
 
 export default HomePage;

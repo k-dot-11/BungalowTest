@@ -30,7 +30,7 @@ const OrderOnlineHome = () => {
 								flexDirection: 'column'
 							}}
 						>
-							<Typography align="center" variant="h2" style={{ color: 'tomato', fontWeight: 'bold' }}>
+							<Typography align="center" variant="h2" style={{ color: theme.primary, fontWeight: 'bold' }}>
 								Order Online <br />
 							</Typography>
 							<div style={{ marginRight: '160px', marginLeft: '160px' }}>
@@ -48,7 +48,7 @@ const OrderOnlineHome = () => {
 								size="large"
 								href="/signin"
 								variant="outlined"
-								style={{ color: 'tomato', borderColor: 'tomato' }}
+								style={{ color: theme.primary, borderColor: theme.primary }}
 							>
 								Order Online
 							</Button>

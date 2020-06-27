@@ -31,7 +31,6 @@ const SignInPage = () => {
 		}
 	};
 	return (
-		<BrowserRouter>
 			<div
 				style={{
 					backgroundColor: 'white',
@@ -122,7 +121,6 @@ const SignInPage = () => {
 					</Typography>
 				</Container>
 			</div>
-		</BrowserRouter>
 	);
 };
 

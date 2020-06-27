@@ -6,12 +6,37 @@ const Hero = () => {
 	return (
 		<ThemeContext.Consumer>
 			{(context) => {
-				const {toggleTheme} = context;
+				const { toggleTheme } = context;
+				const { isLightTheme, light, dark } = context;
+				const theme = isLightTheme ? light : dark;
+				const styles = {
+					heroTitle: {
+						color: 'white'
+					},
+
+					heroButtons: {
+						padding: '20px'
+					},
+
+					heroButton: {
+						marginRight: '10px',
+						marginLeft: '10px',
+						backgroundColor: theme.primary,
+						color: 'white'
+					},
+					cardMedia: {
+						paddingTop: '56.25%' // 16:9
+					},
+					socialIcon: {
+						color: 'white',
+						margin: '10px'
+					}
+				};
 				return (
 					<div
 						style={{
 							backgroundImage:
-								'url(https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)',
+							`url(${require("../../../assets/heroimage.jpeg")})` ,
 							paddingTop: '60px'
 						}}
 					>
@@ -48,30 +73,6 @@ const Hero = () => {
 			}}
 		</ThemeContext.Consumer>
 	);
-};
-
-const styles = {
-	heroTitle: {
-		color: 'white'
-	},
-
-	heroButtons: {
-		padding: '20px'
-	},
-
-	heroButton: {
-		marginRight: '10px',
-		marginLeft: '10px',
-		backgroundColor: 'tomato',
-		color: 'white'
-	},
-	cardMedia: {
-		paddingTop: '56.25%' // 16:9
-	},
-	socialIcon: {
-		color: 'white',
-		margin: '10px'
-	}
 };
 
 export default Hero;
