@@ -12,13 +12,10 @@ import Navbar from './components/layout/navbar/Navbar';
 import ThemeContextProvider from './contexts/ThemeContext';
 
 function App() {
-	useEffect(() => {
-		auth.onAuthStateChanged((userAuth) => {
-			this.setState({ user: userAuth });
-		});
-	}, []);
+	
 
 	return (
+		<UserProvider>
 		<ThemeContextProvider>
 			<Router>
 				<div className="App" style={{ display: 'flex', flexDirection: 'column' }}>
@@ -43,6 +40,7 @@ function App() {
 				</div>
 			</Router>
 		</ThemeContextProvider>
+		</UserProvider>
 	);
 }
 

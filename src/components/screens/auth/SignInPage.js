@@ -11,7 +11,7 @@ import {
 	Grid,
 	Link
 } from '@material-ui/core';
-import { Switch, BrowserRouter, Route } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import LockIcon from '@material-ui/icons/Lock';
 import { auth } from '../../../firebase/firebase';
 
@@ -21,11 +21,14 @@ const SignInPage = () => {
 	const [ email, setEmail ] = useState('');
 	const [ password, setPassword ] = useState('');
 
+	let history = useHistory();
+
 	const signInWithEmailAndPasswordHandler = () => {
-			console.log(email + ' ' +  password)
+		console.log(email + ' ' + password);
 		try {
-			auth.createUserWithEmailAndPassword(email, password).then((data) => {
-				console.log(data)
+			auth.signInWithEmailAndPassword(email, password).then((data) => {
+				history.push('/');
+				console.log(data);
 			});
 		} catch (error) {
 			console.log(error);
@@ -60,7 +63,7 @@ const SignInPage = () => {
 						autoFocus
 						onChange={(text) => {
 							setEmail(text.target.value.toString());
-							console.log(text.target.value)
+							console.log(text.target.value);
 						}}
 						style={styles.formTextField}
 					/>
