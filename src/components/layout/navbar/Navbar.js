@@ -9,7 +9,6 @@ import { auth } from '../../../firebase/firebase';
 
 const Navbar = () => {
 	const user = useContext(UserContext);
-	console.log(user);
 	return (
 		<ThemeContext.Consumer>
 			{(context) => {
@@ -24,7 +23,7 @@ const Navbar = () => {
 
 					appBarTitle: {
 						textAlign: 'left',
-						marginRight: '62vw'
+						flex: 1
 					},
 
 					cameraIcon: {
@@ -48,9 +47,9 @@ const Navbar = () => {
 					<AppBar position="relative" style={styles.appBar}>
 						<Toolbar>
 							<LocalPizzaIcon style={styles.cameraIcon} />
-							<Button href="/" variant="text" color="inherit" noWrap style={styles.appBarTitle}>
+							<Link href="/" variant="text" color="inherit" noWrap style={styles.appBarTitle}>
 								The Bungalow
-							</Button>
+							</Link>
 							<nav>
 								<Button href="/" color="primary" variant="text" style={styles.navLinks}>
 									Home
