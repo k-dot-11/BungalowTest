@@ -10,7 +10,7 @@ const PartyAndCatering = () => {
 				const theme = isLightTheme ? light : dark;
 				return (
 					<Paper elevation={4} style={{ display: 'flex', flexDirection: 'column', height: '60vw' }}>
-						<div
+						<div xs={12} sm={6} md={4}
 							style={{
 								flex: 1,
 								backgroundColor: theme.primary,

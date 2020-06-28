@@ -11,7 +11,7 @@ import {
 	Grid,
 	Link
 } from '@material-ui/core';
-import { Switch, BrowserRouter, Route } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import LockIcon from '@material-ui/icons/Lock';
 import { auth } from '../../../firebase/firebase';
 
@@ -21,106 +21,107 @@ const SignInPage = () => {
 	const [ email, setEmail ] = useState('');
 	const [ password, setPassword ] = useState('');
 
-	const signInWithEmailAndPasswordHandler = (event, email, password) => {
-		event.preventDefault();
+	let history = useHistory();
 
+	const signInWithEmailAndPasswordHandler = () => {
+		console.log(email + ' ' + password);
 		try {
-			const { user } = auth.signInWithEmailAndPassword(email, password);
+			auth.signInWithEmailAndPassword(email, password).then((data) => {
+				history.push('/');
+				console.log(data);
+			});
 		} catch (error) {
 			console.log(error);
 		}
 	};
 	return (
-			<div
-				style={{
-					backgroundColor: 'white',
-					display: 'flex'
-				}}
-			>
-				<Container maxWidth="xs" component="main" style={styles.mainContainer}>
-					<CssBaseline />
-					<Avatar style={styles.avatar} size="large">
-						<LockIcon />
-					</Avatar>
-					<Typography variant="h4" style={styles.headingSignIn}>
-						Sign In
-					</Typography>
-					<form
-						noValidate
-						autoComplete="off"
-						style={{ width: '40vh', display: 'flex', flexDirection: 'column' }}
+		<div
+			style={{
+				backgroundColor: 'white',
+				display: 'flex'
+			}}
+		>
+			<Container maxWidth="xs" component="main" style={styles.mainContainer}>
+				<CssBaseline />
+				<Avatar style={styles.avatar} size="large">
+					<LockIcon />
+				</Avatar>
+				<Typography variant="h4" style={styles.headingSignIn}>
+					Sign In
+				</Typography>
+				<form noValidate autoComplete="off" style={{ width: '40vh', display: 'flex', flexDirection: 'column' }}>
+					<TextField
+						variant="outlined"
+						margin="normal"
+						required
+						fullWidth
+						id="email"
+						label="Email Address"
+						name="email"
+						value={email}
+						autoComplete="email"
+						autoFocus
+						onChange={(text) => {
+							setEmail(text.target.value.toString());
+							console.log(text.target.value);
+						}}
+						style={styles.formTextField}
+					/>
+					<TextField
+						required
+						fullWidth
+						name="password"
+						label="Password"
+						type="password"
+						id="password"
+						value={password}
+						autoComplete="current-password"
+						variant="outlined"
+						onChange={(text) => {
+							setPassword(text.target.value);
+						}}
+						style={styles.formTextField}
+					/>
+					<FormControlLabel
+						control={
+							<Checkbox
+								checked={rememberCheckBox}
+								onChange={() => {
+									setRememberCheck(!rememberCheckBox);
+								}}
+								color="primary"
+							/>
+						}
+						label="Remember me"
+					/>
+					<Button
+						fullWidth
+						variant="contained"
+						color="primary"
+						onClick={signInWithEmailAndPasswordHandler}
+						style={styles.loginButton}
 					>
-						<TextField
-							variant="outlined"
-							margin="normal"
-							required
-							fullWidth
-							id="email"
-							label="Email Address"
-							name="email"
-							value={email}
-							autoComplete="email"
-							autoFocus
-							onChange={(text) => {
-								setEmail(text.target.value);
-							}}
-							style={styles.formTextField}
-						/>
-						<TextField
-							required
-							fullWidth
-							name="password"
-							label="Password"
-							type="password"
-							id="password"
-							value={password}
-							autoComplete="current-password"
-							variant="outlined"
-							onChange={(text) => {
-								setPassword(text.target.value);
-							}}
-							style={styles.formTextField}
-						/>
-						<FormControlLabel
-							control={
-								<Checkbox
-									checked={rememberCheckBox}
-									onChange={() => {
-										setRememberCheck(!rememberCheckBox);
-									}}
-									color="primary"
-								/>
-							}
-							label="Remember me"
-						/>
-						<Button
-							fullWidth
-							variant="contained"
-							color="primary"
-							onClick={signInWithEmailAndPasswordHandler}
-							style={styles.loginButton}
-						>
-							Log In
-						</Button>
-						<Button
-							fullWidth
-							color="primary"
-							variant="contained"
-							style={{ marginBottom: '20px' }}
-							href="/signup"
-						>
-							{'Sign Up'}
-						</Button>
-						<Button size="small" href="#" color="primary" variant="outlined">
-							Forgot password?
-						</Button>
-					</form>
+						Log In
+					</Button>
+					<Button
+						fullWidth
+						color="primary"
+						variant="contained"
+						style={{ marginBottom: '20px' }}
+						href="/signup"
+					>
+						{'Sign Up'}
+					</Button>
+					<Button size="small" href="#" color="primary" variant="outlined">
+						Forgot password?
+					</Button>
+				</form>
 
-					<Typography color="textSecondary" style={{ marginTop: '100px' }}>
-						Copyright © The Bungalow 2020.
-					</Typography>
-				</Container>
-			</div>
+				<Typography color="textSecondary" style={{ marginTop: '100px' }}>
+					Copyright © The Bungalow 2020.
+				</Typography>
+			</Container>
+		</div>
 	);
 };
 

@@ -15,9 +15,7 @@ const ImageSlider = () => {
 		indicators: true,
 		arrows: true,
 		pauseOnHover: true,
-		onChange: (oldIndex, newIndex) => {
-			console.log(`slide transition from ${oldIndex} to ${newIndex}`);
-		}
+		onChange: (oldIndex, newIndex) => {}
 	};
 
 	return (
@@ -48,7 +46,7 @@ const ImageSlider = () => {
 						textAlign: 'center'
 					}}
 				>
-					<div style={{ backgroundImage: `url(${images[0]})`, height: '500px' }}/>
+					<div style={{ backgroundImage: `url(${images[0]})`, height: '500px' }} />
 				</div>
 			</Fade>
 		</div>
