@@ -15,6 +15,7 @@ import {
   Avatar,
 } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
+import TestimonialGrid from "../layout/home/TestimonialGrid";
 
 const AboutPage = () => {
   return (
@@ -166,73 +167,7 @@ const AboutPage = () => {
                 The love and the kind words of appreciation is really the secret
                 ingredient of our success and the key reason for us to comeback.
               </Typography>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  width: "55vw",
-                  margin: "20px",
-                  marginBottom: "30px",
-                }}
-              >
-                <Paper
-                  style={{
-                    backgroundColor: theme.paper,
-                    padding: "20px",
-                    margin: "20px",
-                  }}
-                >
-                  <Typography style={{ color: theme.syntax }}>
-                    For a vegetarian buffet Lunch I think this is one of the
-                    best places. The services is also very impressive
-                  </Typography>
-                  <div>
-                    <Avatar
-                      style={{ backgroundColor: "tomato", margin: "10px" }}
-                    >
-                      KS
-                    </Avatar>
-                  </div>
-                </Paper>
-                <Paper
-                  style={{
-                    backgroundColor: theme.paper,
-                    padding: "20px",
-                    margin: "20px",
-                  }}
-                >
-                  <Typography style={{ color: theme.syntax }}>
-                    For a vegetarian buffet Lunch I think this is one of the
-                    best places. The services is also very impressive
-                  </Typography>
-                  <div>
-                    <Avatar
-                      style={{ backgroundColor: "tomato", margin: "10px" }}
-                    >
-                      MD
-                    </Avatar>
-                  </div>
-                </Paper>
-                <Paper
-                  style={{
-                    backgroundColor: theme.paper,
-                    padding: "20px",
-                    margin: "20px",
-                  }}
-                >
-                  <Typography style={{ color: theme.syntax }}>
-                    For a vegetarian buffet Lunch I think this is one of the
-                    best places. The services is also very impressive
-                  </Typography>
-                  <div>
-                    <Avatar
-                      style={{ backgroundColor: "tomato", margin: "10px" }}
-                    >
-                      PS
-                    </Avatar>
-                  </div>
-                </Paper>
-              </div>
+              <TestimonialGrid/>
             </div>
             <FooterBungalow />
           </>

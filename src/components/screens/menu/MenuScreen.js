@@ -1,23 +1,19 @@
 import React, { useState, useEffect, useContext } from 'react';
 
-import {
-	Grid,
-	Card,
-	CardContent,
-	Typography,
-	Button,
-	Container,
-	CardActions,
-	CardMedia,
-	Tabs,
-	Tab,
-	AppBar,
-	CircularProgress
-} from '@material-ui/core';
+import { Drawer, Tabs, Tab, AppBar, Toolbar, makeStyles, Hidden } from '@material-ui/core';
 import { firestore } from '../../../firebase/firebase';
 import { ThemeContext } from '../../../contexts/ThemeContext';
 import MenuGrid from '../../layout/menu/MenuGrid';
 import FooterBungalow from '../../layout/home/FooterBungalow';
+import List from '@material-ui/core/List';
+import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import MailIcon from '@material-ui/icons/Mail';
+import MenuDrawer from '../../layout/menu/MenuDrawer';
 
 function TabPanel(props) {
 	const { children, value, index, ...other } = props;
@@ -35,7 +31,14 @@ function TabPanel(props) {
 	);
 }
 
+const useStyles = makeStyles((theme) => ({
+	appBar: {
+		zIndex: theme.zIndex.drawer + 1
+	}
+}));
+
 const MenuScreen = () => {
+	const classes = useStyles();
 	const [ value, setValue ] = React.useState(0);
 
 	const handleChange = (event, newValue) => {
@@ -53,7 +56,7 @@ const MenuScreen = () => {
 				minHeight: 'sm'
 			}}
 		>
-			<AppBar position="static" style={{ backgroundColor: 'tomato' }}>
+			<AppBar className={classes.appBar} position="static" style={{ backgroundColor: 'tomato' }}>
 				<Tabs value={value} onChange={handleChange} centered aria-label="simple tabs example">
 					<Tab label="Main Course (Veg)" />
 					<Tab label="Beverages" />
@@ -62,6 +65,7 @@ const MenuScreen = () => {
 					<Tab label="Desserts" />
 				</Tabs>
 			</AppBar>
+			<MenuDrawer />
 			<TabPanel value={value} index={0}>
 				<MenuGrid name="MainCourse" image="curry" />
 			</TabPanel>

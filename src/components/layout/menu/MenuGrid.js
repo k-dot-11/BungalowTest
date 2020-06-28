@@ -13,6 +13,7 @@ import {
 import FooterBungalow from '../home/FooterBungalow';
 import { firestore } from '../../../firebase/firebase';
 import { ThemeContext } from '../../../contexts/ThemeContext';
+import {PacmanLoader} from 'react-spinners';
 
 const MenuGrid = (props) => {
 	const { isLightTheme, light, dark } = useContext(ThemeContext);
@@ -43,7 +44,23 @@ const MenuGrid = (props) => {
 		return () => subscriber();
 	}, []);
 
-	if (loading) return <CircularProgress />;
+	if (loading)
+		return (
+			<Container
+				maxWidth="md"
+				minHeight="100vh"
+				style={{
+					height: '100vh',
+					alignItems: 'center',
+					justifyContent: 'center',
+					display: 'flex',
+					backgroundColor: theme.bg,
+					marginBottom: '20px'
+				}}
+			>
+				<PacmanLoader color={'tomato'}/>
+			</Container>
+		);
 	return (
 		<Container maxWidth="md" minHeight="100vh" style={{ backgroundColor: theme.bg, marginBottom: '20px' }}>
 			<Grid container spacing={4} style={{ marginTop: '30px' }}>

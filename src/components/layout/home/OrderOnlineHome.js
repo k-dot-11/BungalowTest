@@ -33,7 +33,7 @@ const OrderOnlineHome = () => {
 							<Typography align="center" variant="h2" style={{ color: theme.primary, fontWeight: 'bold' }}>
 								Order Online <br />
 							</Typography>
-							<div style={{ marginRight: '160px', marginLeft: '160px' }}>
+							<div style={{ margin:'10px'}}>
 								<Typography align="center" style={{ color: theme.syntax, size: '30px' }}>
 									________<br />
 									<br />
