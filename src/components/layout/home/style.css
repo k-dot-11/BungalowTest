@@ -1,0 +1,10 @@
+@media (max-width: 724px) {
+  .content-party {
+    width: 50vw;
+  }
+}
+@media (min-width: 724px) {
+  .content-party {
+    width: 50vw;
+  }
+}
