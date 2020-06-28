@@ -10,6 +10,7 @@ import {
   CardMedia,
   CardContent,
   CardActions,
+  Hidden,
   Container,
   Paper,
   Avatar,
@@ -50,12 +51,21 @@ const AboutPage = () => {
                   }}
                 >
                   {" "}
-                  <img
-                    style={{ margin: "60px 40px 20px", float: "right" }}
-                    src="https://www.utsavvegetarian.com/wp-content/uploads/2019/01/utsav-ws.jpg"
-                    height="475vw"
-                    width="auto"
-                  />
+                  <Hidden smDown>
+                    <div>
+                      <img
+                        style={{
+                          margin: "60px 40px 20px",
+                          float: "right",
+                          alignSelf: "center",
+                          justifySelf: "center",
+                        }}
+                        src="https://www.utsavvegetarian.com/wp-content/uploads/2019/01/utsav-ws.jpg"
+                        width="475vw"
+                        height="auto"
+                      />
+                    </div>
+                  </Hidden>
                   <Typography
                     style={{
                       color: "white",
@@ -63,7 +73,7 @@ const AboutPage = () => {
                       padding: "30px 30px 15px",
                     }}
                     variant="h2"
-                    align="left"
+                    align="center"
                   >
                     Our Story
                   </Typography>
@@ -128,7 +138,7 @@ const AboutPage = () => {
                   >
                     Our Team <br />
                   </Typography>
-                  <div style={{ marginRight: "160px", marginLeft: "160px" }}>
+                  <div style={{ marginRight: "13%", marginLeft: "13%" }}>
                     <Typography
                       align="center"
                       style={{ color: theme.syntax, size: "30px" }}
@@ -145,9 +155,9 @@ const AboutPage = () => {
                   </div>
                   <br />
                   <img
-                    style={{ borderRadius: 15, margin: 20 }}
+                    style={{ borderRadius: 15 }}
                     src="https://www.utsavvegetarian.com/wp-content/uploads/2019/12/team-1200x769.jpg"
-                    width="990"
+                    width="90%"
                     height="auto"
                   />
                 </Paper>
@@ -167,7 +177,7 @@ const AboutPage = () => {
                 The love and the kind words of appreciation is really the secret
                 ingredient of our success and the key reason for us to comeback.
               </Typography>
-              <TestimonialGrid/>
+              <TestimonialGrid />
             </div>
             <FooterBungalow />
           </>
