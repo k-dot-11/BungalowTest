@@ -48,21 +48,65 @@ const Navbar = () => {
             backgroundColor: "#444",
           }}
         >
-          <Toolbar />
-          <Toolbar />
-          <div>
+          <div style={{ align: "center" }}>
+            <Button
+              style={{
+                margin: "25px 0 30px",
+                width: "20px",
+                left: "26%",
+                height: "20px",
+                borderRadius: "10px",
+                align: "center",
+              }}
+              onClick={() => setNavBarOpen(false)}
+            >
+              X
+            </Button>
+          </div>
+
+          <div style={{ alignItems: "center", justifyContent: "center" }}>
             <List>
-              {["STYLING KRNI H ISSKI ABHI", "CLOSE", "CLOSE"].map(
-                (text, index) => (
-                  <ListItem
-                    button
-                    key={text}
-                    onClick={() => setNavBarOpen(false)}
-                  >
-                    <ListItemText primary={text} />
-                  </ListItem>
-                )
-              )}
+              <ListItem button component="a" href="/">
+                <ListItemText align="center" style={{}} primary="HOME" />
+              </ListItem>
+              <ListItem button component="a" href="/menu">
+                <ListItemText align="center" primary="MENU" />
+              </ListItem>
+              <ListItem button component="a" href="/about">
+                <ListItemText align="center" primary="ABOUT" />
+              </ListItem>
+              <ListItem
+                button
+                component="a"
+                href="https://www.zomato.com/udaipur/the-bungalow-udaipur-panchwati"
+              >
+                <ListItemText align="center" primary="ORDER NOW" />
+              </ListItem>
+              <br></br>
+              <div style={{}}>
+                <Button
+                  href="/signin"
+                  onClick={() => {
+                    user
+                      ? auth
+                          .signOut()
+                          .then(() => console.log("User signed out!"))
+                      : console.log("Going to signin page");
+                  }}
+                  color="primary"
+                  variant="outlined"
+                  style={{
+                    left: "20%",
+                    align: "center",
+                    borderColor: "TOMATO",
+                    borderWidth: "1/2px",
+                    borderRadius: "20px",
+                    color: "tomato",
+                  }}
+                >
+                  {user ? "Sign Out" : "Sign In"}
+                </Button>
+              </div>
             </List>
             <Divider />
             <List>
