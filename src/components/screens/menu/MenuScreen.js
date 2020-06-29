@@ -56,7 +56,7 @@ const MenuScreen = () => {
 				minHeight: 'sm'
 			}}
 		>
-			<AppBar className={classes.appBar} position={"absolute"&&'sticky'} style={{top:'64px',left:'0px',right:'0px', backgroundColor: 'tomato' }}>
+			<AppBar className={classes.appBar} position={'sticky'} style={{top:'56px',left:'0px',right:'0px', backgroundColor: 'tomato' }}>
 				<Tabs value={value} onChange={handleChange} centered aria-label="simple tabs example">
 					<Tab label="Main Course (Veg)" />
 					<Tab label="Beverages" />

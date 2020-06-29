@@ -69,7 +69,7 @@ const MenuGrid = (props) => {
     >
       <Grid container spacing={4} style={{ marginTop: "30px" }}>
         {menuItems.map((item) => (
-          <Grid item key={item.name} xs={12} sm={6} md={4}>
+          <Grid item key={item.name} xs={6} sm={6} md={4}>
             <Card
               elevation={5}
               style={{

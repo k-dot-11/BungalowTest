@@ -20,16 +20,14 @@ const MenuDrawer = () => {
 		<Hidden smDown>
 			<Drawer
 				variant="permanent"
-				style={{
-					flexShrink: 0,
-				}}
+				
 			>
 				<Toolbar style={{backgroundColor:theme.paper}}/>
 				<Toolbar style={{backgroundColor:theme.paper}}/>
 				<div
 					style={{
 						flexShrink: 0,
-						backgroundColor: theme.bg,
+						backgroundColor: theme.paper,
 						height:'86vh',
 						width:'240px'
 					}}
