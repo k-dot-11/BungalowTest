@@ -37,6 +37,7 @@ const AboutPage = () => {
               }}
             >
               <Paper
+                xs={12} md={8} 
                 elevation={4}
                 style={{
                   display: "flex",

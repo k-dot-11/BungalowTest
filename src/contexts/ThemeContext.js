@@ -8,7 +8,7 @@ class ThemeContextProvider extends Component {
 		light: {
 			title: '#000',
 			syntax: '#222',
-			paper: '#eee',
+			paper: '#ededed',
 			bg: '#eee',
 			footerColor: 'tomato',
 			primary: 'tomato',

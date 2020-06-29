@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Drawer, Tabs, Tab, AppBar, Toolbar, makeStyles, Hidden, List } from '@material-ui/core';
 
 import Typography from '@material-ui/core/Typography';
@@ -8,49 +8,36 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
+import { ThemeContext } from '../../../contexts/ThemeContext';
 
-const useStyles = makeStyles((theme) => ({
-	root: {
-		display: 'flex'
-	},
-	appBar: {
-		zIndex: theme.zIndex.drawer + 1
-	},
-	drawer: {
-		width: 240,
-		flexShrink: 0
-	},
-	drawerPaper: {
-		width: 240
-	},
-	drawerContainer: {
-		overflow: 'auto'
-	},
-	content: {
-		flexGrow: 1,
-		padding: theme.spacing(4)
-	}
-}));
+const useStyles = makeStyles((theme) => ({}));
 
 const MenuDrawer = () => {
 	const classes = useStyles();
-
+	const { isLightTheme, dark, light } = useContext(ThemeContext);
+	const theme = isLightTheme ? light : dark;
 	return (
 		<Hidden smDown>
 			<Drawer
 				variant="permanent"
 				style={{
 					flexShrink: 0,
-					backgroundColor: '#444'
 				}}
 			>
-				<Toolbar />
-				<Toolbar />
-				<div>
+				<Toolbar style={{backgroundColor:theme.paper}}/>
+				<Toolbar style={{backgroundColor:theme.paper}}/>
+				<div
+					style={{
+						flexShrink: 0,
+						backgroundColor: theme.bg,
+						height:'86vh',
+						width:'240px'
+					}}
+				>
 					<List>
-						{[ 'STYLING KRNI H ISSKI ABHI', 'KHANA', 'KHANA' ].map((text, index) => (
+						{[ 'STYLING krdi H ISSKI ABHI', 'KHANA', 'KHANA' ].map((text, index) => (
 							<ListItem button key={text}>
-								<ListItemText primary={text} />
+								<ListItemText primary={text} style = {{color:theme.title}}/>
 							</ListItem>
 						))}
 					</List>
@@ -58,7 +45,7 @@ const MenuDrawer = () => {
 					<List>
 						{[ 'KHANA KHANA', 'KHANA', 'KHANA' ].map((text, index) => (
 							<ListItem button key={text}>
-								<ListItemText primary={text} />
+								<ListItemText primary={text} style = {{color:theme.syntax}}/>
 							</ListItem>
 						))}
 					</List>

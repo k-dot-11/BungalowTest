@@ -34,7 +34,14 @@ const NavDrawer = (props) => {
       >
         <Toolbar />
         <Toolbar />
-        <div>
+        <div
+					style={{
+						flexShrink: 0,
+						backgroundColor: theme.bg,
+						height:'86vh',
+						width:'240px'
+					}}
+				>
           <List>
             {["STYLING KRNI H ISSKI ABHI", "KHANA", "KHANA"].map(
               (text, index) => (

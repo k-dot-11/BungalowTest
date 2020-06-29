@@ -30,6 +30,9 @@ const useStyles = makeStyles((theme) => ({
 
 const Navbar = () => {
   const user = useContext(UserContext);
+	const { isLightTheme, dark, light } = useContext(ThemeContext);
+	const theme = isLightTheme ? light : dark;
+  
   const classes = useStyles();
   const [navBarOpen, setNavBarOpen] = useState(false);
 
@@ -39,24 +42,24 @@ const Navbar = () => {
         <Drawer
           md={12}
           xs={12}
-          variant="temporary"
+                    variant="temporary"
           anchor="right"
           open={navBarOpen}
           style={{
-            width: "0%",
             flexShrink: 0,
-            backgroundColor: "#444",
+            width:'70vw'
           }}
         >
-          <div style={{ align: "center" }}>
+          <div style={{display: "flex", alignItems: "center" , justifyContent: "center" , backgroundColor: theme.paper, }}>
             <Button
               style={{
-                margin: "25px 0 30px",
+                  margin:'30px',
+                
                 width: "20px",
-                left: "26%",
                 height: "20px",
                 borderRadius: "10px",
                 align: "center",
+                color: theme.title
               }}
               onClick={() => setNavBarOpen(false)}
             >
@@ -64,26 +67,27 @@ const Navbar = () => {
             </Button>
           </div>
 
-          <div style={{ alignItems: "center", justifyContent: "center" }}>
+          <div style={{ alignItems: "center", justifyContent: "center" ,backgroundColor: theme.paper,height: '100vh',width:'70vw',}}>
             <List>
               <ListItem button component="a" href="/">
-                <ListItemText align="center" style={{}} primary="HOME" />
+                <ListItemText align="center" style={{color:theme.syntax}} primary="HOME" />
               </ListItem>
-              <ListItem button component="a" href="/menu">
+              <ListItem button component="a" style={{color:theme.syntax}}  href="/menu">
                 <ListItemText align="center" primary="MENU" />
               </ListItem>
-              <ListItem button component="a" href="/about">
-                <ListItemText align="center" primary="ABOUT" />
+              <ListItem button component="a" style={{color:theme.syntax}} href="/about">
+                <ListItemText align="center" style={{color:theme.syntax}} primary="ABOUT" />
               </ListItem>
               <ListItem
                 button
+                style={{color:theme.syntax}} 
                 component="a"
                 href="https://www.zomato.com/udaipur/the-bungalow-udaipur-panchwati"
               >
-                <ListItemText align="center" primary="ORDER NOW" />
+                <ListItemText align="center" primary="ORDER NOW" style={{color:theme.syntax}} />
               </ListItem>
               <br></br>
-              <div style={{}}>
+              <div style={{display: "flex", alignItems: "center" , justifyContent: "center" , backgroundColor: theme.paper,}}>
                 <Button
                   href="/signin"
                   onClick={() => {
@@ -96,8 +100,7 @@ const Navbar = () => {
                   color="primary"
                   variant="outlined"
                   style={{
-                    left: "20%",
-                    align: "center",
+                    alignSelf: "center",
                     borderColor: "TOMATO",
                     borderWidth: "1/2px",
                     borderRadius: "20px",
@@ -109,13 +112,7 @@ const Navbar = () => {
               </div>
             </List>
             <Divider />
-            <List>
-              {["KHANA KHANA", "KHANA", "KHANA"].map((text, index) => (
-                <ListItem button key={text}>
-                  <ListItemText primary={text} />
-                </ListItem>
-              ))}
-            </List>
+         
           </div>
         </Drawer>
       </Hidden>
@@ -159,7 +156,7 @@ const Navbar = () => {
         };
         return (
           <AppBar
-            position="relative"
+            position="sticky"
             style={styles.appBar}
             className={classes.appBar}
           >

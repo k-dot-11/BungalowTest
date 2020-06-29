@@ -74,7 +74,6 @@ const MenuGrid = (props) => {
               elevation={5}
               style={{
                 padding: "10px",
-                height: "25vw",
                 backgroundColor: theme.paper,
               }}
             >

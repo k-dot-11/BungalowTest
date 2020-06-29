@@ -62,7 +62,7 @@ const Hero = () => {
 									</Button>
 								</Grid>
 								<Grid item>
-									<Button href="/signin" variant="contained" style={styles.heroButton}>
+									<Button href="/menu" variant="contained" style={styles.heroButton}>
 										Menu
 									</Button>
 								</Grid>
