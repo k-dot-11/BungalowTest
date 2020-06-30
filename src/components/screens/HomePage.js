@@ -44,13 +44,14 @@ const HomePage = () => {
 									marginTop: '67px',
 									display: 'flex',
 									flexDirection: 'column',
-									alignItems: 'center'
+									alignItems: 'center',
+									padding:'30px'
 								}}
 							>
 								<Typography variant="h2" align="center" style={{ color: theme.primary }}>
 									Testimonials
 								</Typography>
-								<Typography variant="subtitle2" style={{ color: theme.syntax }}>
+								<Typography variant="subtitle2" align="center"  style={{ color: theme.syntax }}>
 									<br />
 									<br />
 									The love and the kind words of appreciation is really the secret ingredient of our

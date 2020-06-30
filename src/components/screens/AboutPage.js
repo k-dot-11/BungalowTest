@@ -1,5 +1,6 @@
 import React from "react";
 import { ThemeContext } from "../../contexts/ThemeContext";
+import { Parallax, Background } from 'react-parallax';
 import OdeToFood from "../layout/home/OdeToFood";
 import FooterBungalow from "../layout/home/FooterBungalow";
 import {
@@ -36,6 +37,7 @@ const AboutPage = () => {
                 flexDirection: "column",
               }}
             >
+             
               <Paper
                 xs={12} md={8} 
                 elevation={4}

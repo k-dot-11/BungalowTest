@@ -11,6 +11,7 @@ import SmallParties from "./components/screens/SmallParties";
 import { auth } from "./firebase/firebase";
 import Navbar from "./components/layout/navbar/Navbar";
 import ThemeContextProvider from "./contexts/ThemeContext";
+import ConceptHome from "./components/screens/concept/ConceptHome";
 
 function App() {
   return (
@@ -38,7 +39,9 @@ function App() {
               <Route path="/smallparties">
                 <SmallParties />
               </Route>
-              <Route path="/">
+              <Route path="/concepthome">
+                <ConceptHome />
+              </Route><Route path="/">
                 <HomePage />
               </Route>
             </Switch>

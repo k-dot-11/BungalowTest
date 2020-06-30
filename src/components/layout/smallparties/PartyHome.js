@@ -3,12 +3,12 @@ import { Paper, Typography, Divider, Button, Hidden } from '@material-ui/core';
 
 const PartyHome = () => {
 	return (
-		<Paper elevation={4} style={{ display: 'flex', flexDirection: 'row' , width:'70vw', justifyContent:'center'}}>
-            <Hidden smDown sm={0}>
+		<Paper elevation={20} style={{ display: 'flex', flexDirection: 'row' , width:'70vw', justifyContent:'center'}}>
+            <Hidden smDown sm={1}>
 			<div style={{ padding:'30px', backgroundColor: 'tomato', }}>
-				<Paper
+				<img
+				src={require('../../../assets/partyhome.jpg')}
 					style={{
-						backgroundImage: `url(${require('../../../assets/partyhome.jpg')})`,
 						width: '600px',
 						height: '537px',
 						borderRadius: '60px'
@@ -16,23 +16,23 @@ const PartyHome = () => {
 				/>
 			</div>
             </Hidden>
-			<div style={{ flex: 1, backgroundColor: 'tomato', padding: '30px' }}>
+			<div style={{display: 'flex' , flexDirection: 'column', flex: 1, backgroundColor: 'tomato', padding: '15px' , justifyContent: 'center' }}>
 				<Hidden mdUp>
-					<Paper
-						style={{
-							backgroundImage: `url(${require('../../../assets/partyhome.jpg')})`,
-                            width: '70vw',
-                            height:'50vh',
-							borderRadius: '60px'
-						}}
-					/>
+				<img
+				src={require('../../../assets/partyhome.jpg')}
+					style={{
+						width: '70vw',
+						height: 'auto',
+						borderRadius: '60px',
+					}}
+				/>
 				</Hidden>
-				<Typography variant="h2" style={{ color: 'white' }}>
+				<Typography variant="h2" style={{ color: 'white' , margin:'20px'}}>
 					Party @ Home
 				</Typography>
 				<br /> 
 				<br />
-				<Divider style={{ backgroundColor: 'white' }} />
+				<Divider style={{ backgroundColor: 'white', }} />
 				<br />
 				<Typography align="justify" variant="body1" style={{ fontSize: '20px', color: 'white' }}>
 					We understand the big things you need to handle while hosting your small party at home. Especially
