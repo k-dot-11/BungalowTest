@@ -3,7 +3,7 @@ import { Paper, Typography, Divider, Button, Hidden } from '@material-ui/core';
 
 const PartyHome = () => {
 	return (
-		<Paper elevation={4} style={{ display: 'flex', flexDirection: 'row' , width:'70vw' }}>
+		<Paper elevation={4} style={{ display: 'flex', flexDirection: 'row' , width:'70vw', justifyContent:'center'}}>
             <Hidden smDown sm={0}>
 			<div style={{ padding:'30px', backgroundColor: 'tomato', }}>
 				<Paper
