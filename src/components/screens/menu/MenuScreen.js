@@ -22,8 +22,8 @@ function TabPanel(props) {
 		<div
 			role="tabpanel"
 			hidden={value !== index}
-			id={`simple-tabpanel-${index}`}
-			aria-labelledby={`simple-tab-${index}`}
+			id={`scrollable-force-tabpanel-${index}`}
+      aria-labelledby={`scrollable-force-tab-${index}`}
 			{...other}
 		>
 			{children}
@@ -56,7 +56,11 @@ const MenuScreen = () => {
 				minHeight: 'sm'
 			}}
 		>
-			<AppBar className={classes.appBar} position={'sticky'} style={{top:'56px',left:'0px',right:'0px', backgroundColor: 'tomato' }}>
+			<AppBar
+				className={classes.appBar}
+				position={'sticky'}
+				style={{ top: '56px', left: '0px', right: '0px', backgroundColor: 'tomato' }}
+			>
 				<Tabs value={value} onChange={handleChange} centered aria-label="simple tabs example">
 					<Tab label="Main Course (Veg)" />
 					<Tab label="Beverages" />

@@ -19,6 +19,8 @@ const PartyAndCatering = () => {
           <Paper
             elevation={4}
             style={{ display: "flex", flexDirection: "column" }}
+            xs={12}
+            sm={12}
           >
             <div
               xs={12}

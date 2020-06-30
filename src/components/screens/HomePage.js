@@ -1,20 +1,5 @@
 import React from 'react';
-import {
-	Button,
-	Link,
-	Grid,
-	Card,
-	CardMedia,
-	CardContent,
-	CardActions,
-	Container,
-	Paper,
-	Avatar
-} from '@material-ui/core';
-import LocalPizzaIcon from '@material-ui/icons/LocalPizza';
 import Typography from '@material-ui/core/Typography';
-import { Slide } from 'react-slideshow-image';
-
 import Hero from '../layout/home/Hero';
 import TestimonialGrid from '../layout/home/TestimonialGrid';
 import OdeToFood from '../layout/home/OdeToFood';
@@ -34,6 +19,7 @@ const HomePage = () => {
 				return (
 					<div style={{ display: 'flex', flexDirection: 'column' }}>
 						<Hero />
+					
 
 						<OdeToFood />
 
@@ -51,7 +37,7 @@ const HomePage = () => {
 
 							<ImageSlider />
 
-							<PartyAndCatering />
+							<PartyAndCatering xs={12} sm={12} />
 
 							<div
 								style={{
@@ -70,7 +56,7 @@ const HomePage = () => {
 									The love and the kind words of appreciation is really the secret ingredient of our
 									success and the key reason for us to comeback.
 								</Typography>
-									<TestimonialGrid />
+								<TestimonialGrid />
 							</div>
 						</div>
 						<FooterBungalow />

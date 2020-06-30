@@ -73,7 +73,7 @@ const MenuGrid = (props) => {
         style={{ marginTop: "30px", alignItems: "stretch" }}
       >
         {menuItems.map((item) => (
-          <Grid item key={item.name} xs={6} sm={6} md={4}>
+          <Grid item key={item.name} xs={12} sm={6} md={4}>
             <Card
               elevation={5}
               style={{
