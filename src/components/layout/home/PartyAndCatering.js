@@ -73,7 +73,7 @@ const PartyAndCatering = () => {
                   to bring delicious, hot and wholesome food at your doorstep.
                 </Typography>
                 <Button
-                  href="/signin"
+                  href="/smallparties"
                   variant="contained"
                   size="large"
                   style={{

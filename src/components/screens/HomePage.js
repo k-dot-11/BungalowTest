@@ -92,34 +92,4 @@ const HomePage = () => {
 
 export default HomePage;
 
-{
-	/* {	<Grid container>
-					{cards.map((card) => (
-						<Grid item key={card} xs={8} sm={6} md={3}>
-							<Card style={{ margin: '15px', backgroundColor: '#444444' }}>
-								<CardMedia
-									image="https://source.unsplash.com/1600x900/?restaurant"
-									title="Image title"
-									style={styles.cardMedia}
-								/>
-								<CardContent>
-									<Typography gutterBottom variant="h5" component="h2" style={{ color: 'white' }}>
-										Heading
-									</Typography>
-									<Typography style={{ color: 'lightgrey' }}>
-										This is a media card. You can use this section to describe the content.
-									</Typography>
-								</CardContent>
-								<CardActions>
-									<Button size="small" color="secondary">
-										View
-									</Button>
-									<Button size="small" color="secondary">
-										Edit
-									</Button>
-								</CardActions>
-							</Card>
-						</Grid>
-					))}
-				</Grid> } */
-}
+

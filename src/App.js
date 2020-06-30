@@ -7,6 +7,7 @@ import AboutPage from "./components/screens/AboutPage";
 import SignUpPage from "./components/screens/auth/SignUpPage";
 import UserProvider from "./providers/UserProvider";
 import MenuScreen from "./components/screens/menu/MenuScreen";
+import SmallParties from "./components/screens/SmallParties";
 import { auth } from "./firebase/firebase";
 import Navbar from "./components/layout/navbar/Navbar";
 import ThemeContextProvider from "./contexts/ThemeContext";
@@ -33,6 +34,9 @@ function App() {
               </Route>
               <Route path="/menu">
                 <MenuScreen />
+              </Route>
+              <Route path="/smallparties">
+                <SmallParties />
               </Route>
               <Route path="/">
                 <HomePage />
