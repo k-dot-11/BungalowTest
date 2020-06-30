@@ -67,12 +67,17 @@ const MenuGrid = (props) => {
       minHeight="100vh"
       style={{ backgroundColor: theme.bg, marginBottom: "20px" }}
     >
-      <Grid container spacing={4} style={{ marginTop: "30px" }}>
+      <Grid
+        container
+        spacing={4}
+        style={{ marginTop: "30px", alignItems: "stretch" }}
+      >
         {menuItems.map((item) => (
           <Grid item key={item.name} xs={6} sm={6} md={4}>
             <Card
               elevation={5}
               style={{
+                height: "100%",
                 padding: "10px",
                 backgroundColor: theme.paper,
               }}
