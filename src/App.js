@@ -11,11 +11,8 @@ import SmallParties from "./components/screens/SmallParties";
 import { auth } from "./firebase/firebase";
 import Navbar from "./components/layout/navbar/Navbar";
 import ThemeContextProvider from "./contexts/ThemeContext";
-<<<<<<< HEAD
-import { CateringScreen } from "./components/screens/menu/CateringScreen";
-=======
+import CateringScreen from "./components/screens/menu/CateringScreen";
 import ConceptHome from "./components/screens/concept/ConceptHome";
->>>>>>> 89e757075c6506b6d5350f3022ddef2d8180d58a
 
 function App() {
   return (
@@ -40,19 +37,16 @@ function App() {
               <Route path="/menu">
                 <MenuScreen />
               </Route>
-<<<<<<< HEAD
-              <Route path="/catering">
-                <CateringScreen />
-              </Route>
-              <Route path="/">
-=======
               <Route path="/smallparties">
                 <SmallParties />
               </Route>
               <Route path="/concepthome">
                 <ConceptHome />
-              </Route><Route path="/">
->>>>>>> 89e757075c6506b6d5350f3022ddef2d8180d58a
+              </Route>
+              <Route path="/catering">
+                <CateringScreen />
+              </Route>
+              <Route path="/">
                 <HomePage />
               </Route>
             </Switch>

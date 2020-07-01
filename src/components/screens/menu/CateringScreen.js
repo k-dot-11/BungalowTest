@@ -19,7 +19,7 @@ import {
 import Typography from "@material-ui/core/Typography";
 import TestimonialGrid from "../../layout/home/TestimonialGrid";
 
-export const CateringScreen = () => {
+const CateringScreen = () => {
   return (
     <ThemeContext.Consumer>
       {(context) => {
@@ -348,3 +348,4 @@ export const CateringScreen = () => {
     </ThemeContext.Consumer>
   );
 };
+export default CateringScreen;
