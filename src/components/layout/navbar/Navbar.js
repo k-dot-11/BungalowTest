@@ -1,11 +1,17 @@
 import React, { useContext, useState } from 'react';
 import { Button, Link, makeStyles, Hidden, IconButton, Drawer, List } from '@material-ui/core';
 import AppBar from '@material-ui/core/AppBar';
+import InfoIcon from '@material-ui/icons/Info';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import LocalPizzaIcon from '@material-ui/icons/LocalPizza';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
+import Brightness4Icon from '@material-ui/icons/Brightness4';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
+import HomeIcon from '@material-ui/icons/Home';
+import MenuBookIcon from '@material-ui/icons/MenuBook';
+import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import Toolbar from '@material-ui/core/Toolbar';
 import { ThemeContext } from '../../../contexts/ThemeContext';
 import { UserContext } from '../../../providers/UserProvider';
@@ -139,7 +145,8 @@ const Navbar = () => {
 					appBar: {
 						display: 'flex',
 						backgroundColor: theme.primary,
-						flex: 1
+						flex: 1,
+						width: '100vw'
 					},
 
 					appBarTitle: {
@@ -187,10 +194,22 @@ const Navbar = () => {
 
 							<Hidden smDown>
 								<nav>
-									<Button href="/" color="primary" variant="text" style={styles.navLinks}>
+									<Button
+										href="/"
+										color="primary"
+										variant="text"
+										style={styles.navLinks}
+										startIcon={<HomeIcon />}
+									>
 										Home
 									</Button>
-									<Button href="/menu" color="primary" variant="text" style={styles.navLinks}>
+									<Button
+										href="/menu"
+										color="primary"
+										variant="text"
+										style={styles.navLinks}
+										startIcon={<MenuBookIcon />}
+									>
 										Menu
 									</Button>
 									<Button
@@ -198,16 +217,30 @@ const Navbar = () => {
 										color="primary"
 										variant="text"
 										style={styles.navLinks}
+										startIcon={<ShoppingBasketIcon />}
 									>
 										Order Online
 									</Button>
-									<Button href="/about" color="primary" variant="text" style={styles.navLinks}>
+									<Button
+										href="/about"
+										color="primary"
+										variant="text"
+										style={styles.navLinks}
+										startIcon={<InfoIcon />}
+									>
 										About
 									</Button>
-									<Button color="primary" variant="text" style={styles.navLinks} onClick={toggleTheme}>
+									<Button
+										color="primary"
+										variant="text"
+										style={styles.navLinks}
+										onClick={toggleTheme}
+										startIcon={<Brightness4Icon />}
+									>
 										Toggle Theme
 									</Button>
 									<Button
+										startIcon={<AccountCircleIcon />}
 										href="/signin"
 										onClick={() => {
 											user

@@ -17,7 +17,7 @@ const HomePage = () => {
 				const theme = isLightTheme ? light : dark;
 
 				return (
-					<div style={{ display: 'flex', flexDirection: 'column' }}>
+					<div style={{ display: 'flex', flexDirection: 'column' , width: '100vw' , backgroundColor: theme.bg}}>
 						<Hero />
 					
 

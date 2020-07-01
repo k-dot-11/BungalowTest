@@ -46,7 +46,7 @@ const Hero = () => {
 							blur={0}
 							bgImage={require('../../../assets/heroimage.jpeg')}
 							bgImageAlt="the cat"
-							style={{ width: '99vw' }}
+							style={{ width: '100vw' }}
 							strength={500}
 						>
 							<Container style={{ flex: 10, backgroundColor: 'transparent' }} maxWidth="sm">
