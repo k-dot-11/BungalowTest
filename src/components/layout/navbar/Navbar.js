@@ -30,9 +30,9 @@ const useStyles = makeStyles((theme) => ({
 
 const Navbar = () => {
   const user = useContext(UserContext);
-	const { isLightTheme, dark, light } = useContext(ThemeContext);
-	const theme = isLightTheme ? light : dark;
-  
+  const { isLightTheme, dark, light } = useContext(ThemeContext);
+  const theme = isLightTheme ? light : dark;
+
   const classes = useStyles();
   const [navBarOpen, setNavBarOpen] = useState(false);
 
@@ -42,24 +42,31 @@ const Navbar = () => {
         <Drawer
           md={12}
           xs={12}
-                    variant="temporary"
+          variant="temporary"
           anchor="right"
           open={navBarOpen}
           style={{
             flexShrink: 0,
-            width:'70vw'
+            width: "70vw",
           }}
         >
-          <div style={{display: "flex", alignItems: "center" , justifyContent: "center" , backgroundColor: theme.paper, }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              backgroundColor: theme.paper,
+            }}
+          >
             <Button
               style={{
-                  margin:'30px',
-                
+                margin: "30px",
+
                 width: "20px",
-                height: "20px",
-                borderRadius: "10px",
+                height: "40px",
+                borderRadius: "40px",
                 align: "center",
-                color: theme.title
+                color: theme.title,
               }}
               onClick={() => setNavBarOpen(false)}
             >
@@ -67,27 +74,64 @@ const Navbar = () => {
             </Button>
           </div>
 
-          <div style={{ alignItems: "center", justifyContent: "center" ,backgroundColor: theme.paper,height: '100vh',width:'70vw',}}>
+          <div
+            style={{
+              alignItems: "center",
+              justifyContent: "center",
+              backgroundColor: theme.paper,
+              height: "100vh",
+              width: "70vw",
+            }}
+          >
             <List>
               <ListItem button component="a" href="/">
-                <ListItemText align="center" style={{color:theme.syntax}} primary="HOME" />
-              </ListItem>
-              <ListItem button component="a" style={{color:theme.syntax}}  href="/menu">
-                <ListItemText align="center" primary="MENU" />
-              </ListItem>
-              <ListItem button component="a" style={{color:theme.syntax}} href="/about">
-                <ListItemText align="center" style={{color:theme.syntax}} primary="ABOUT" />
+                <ListItemText
+                  align="center"
+                  style={{ color: theme.syntax }}
+                  primary="HOME"
+                />
               </ListItem>
               <ListItem
                 button
-                style={{color:theme.syntax}} 
+                component="a"
+                style={{ color: theme.syntax }}
+                href="/menu"
+              >
+                <ListItemText align="center" primary="MENU" />
+              </ListItem>
+              <ListItem
+                button
+                component="a"
+                style={{ color: theme.syntax }}
+                href="/about"
+              >
+                <ListItemText
+                  align="center"
+                  style={{ color: theme.syntax }}
+                  primary="ABOUT"
+                />
+              </ListItem>
+              <ListItem
+                button
+                style={{ color: theme.syntax }}
                 component="a"
                 href="https://www.zomato.com/udaipur/the-bungalow-udaipur-panchwati"
               >
-                <ListItemText align="center" primary="ORDER NOW" style={{color:theme.syntax}} />
+                <ListItemText
+                  align="center"
+                  primary="ORDER NOW"
+                  style={{ color: theme.syntax }}
+                />
               </ListItem>
               <br></br>
-              <div style={{display: "flex", alignItems: "center" , justifyContent: "center" , backgroundColor: theme.paper,}}>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  backgroundColor: theme.paper,
+                }}
+              >
                 <Button
                   href="/signin"
                   onClick={() => {
@@ -112,7 +156,6 @@ const Navbar = () => {
               </div>
             </List>
             <Divider />
-         
           </div>
         </Drawer>
       </Hidden>

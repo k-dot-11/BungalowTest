@@ -10,6 +10,7 @@ import MenuScreen from "./components/screens/menu/MenuScreen";
 import { auth } from "./firebase/firebase";
 import Navbar from "./components/layout/navbar/Navbar";
 import ThemeContextProvider from "./contexts/ThemeContext";
+import { CateringScreen } from "./components/screens/menu/CateringScreen";
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
               </Route>
               <Route path="/menu">
                 <MenuScreen />
+              </Route>
+              <Route path="/catering">
+                <CateringScreen />
               </Route>
               <Route path="/">
                 <HomePage />

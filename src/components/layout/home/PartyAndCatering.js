@@ -124,7 +124,7 @@ const PartyAndCatering = () => {
                   celebrate.
                 </Typography>
                 <Button
-                  href="/signin"
+                  href="/catering"
                   variant="contained"
                   size="large"
                   style={{
