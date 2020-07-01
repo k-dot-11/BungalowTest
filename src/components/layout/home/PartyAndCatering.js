@@ -17,12 +17,13 @@ const PartyAndCatering = () => {
         const theme = isLightTheme ? light : dark;
         return (
           <Paper
-            elevation={4}
+          elevation={0}
             style={{
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
+              backgroundColor:theme.bg
             }}
             xs={12}
             sm={12}
@@ -35,7 +36,7 @@ const PartyAndCatering = () => {
                 flex: 1,
                 backgroundColor: theme.primary,
                 alignItems: "center",
-                width: "75vw",
+                width:'80vw',
                 flexDirection: "row",
                 display: "flex",
               }}
@@ -108,7 +109,7 @@ const PartyAndCatering = () => {
               style={{
                 flex: 1,
                 backgroundColor: theme.primary,
-                width: "75vw",
+                width: "80vw",
                 flexDirection: "row",
                 display: "flex",
               }}

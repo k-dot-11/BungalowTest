@@ -13,7 +13,7 @@ import {
 import FooterBungalow from "../home/FooterBungalow";
 import { firestore } from "../../../firebase/firebase";
 import { ThemeContext } from "../../../contexts/ThemeContext";
-import { PacmanLoader } from "react-spinners";
+import { PacmanLoader , HashLoader, ClimbingBoxLoader} from "react-spinners";
 
 const MenuGrid = (props) => {
   const { isLightTheme, light, dark } = useContext(ThemeContext);
@@ -58,7 +58,7 @@ const MenuGrid = (props) => {
           marginBottom: "20px",
         }}
       >
-        <PacmanLoader color={"tomato"} />
+        <ClimbingBoxLoader color={"tomato"} />
       </Container>
     );
   return (

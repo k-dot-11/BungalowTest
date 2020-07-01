@@ -47,13 +47,13 @@ const Hero = () => {
 							blur={2}
 							bgImage={require('../../../assets/herodark.jpeg')}
 							bgImageAlt="the cat"
-							style={{ width: '100vw', height: '90vh' }}
+							style={{ width: '100vw', height: 'auto' }}
 							strength={600}
 						>
 							<Container
-								style={{ flex: 10,width:'50vw', backgroundColor: 'transparent', marginTop: '9vh' }}
+								style={{ flex: 10,width:'50vw', backgroundColor: 'transparent', marginTop: '15vh' }}
 							>
-								<Typography variant="h1" align='center' style={{color:'white' , fontSize:'73px'}}>
+								<Typography variant="h1" align='center' style={{color:'white' , }}>
 
 									THE BUNGALOW
 									<br />
@@ -68,7 +68,7 @@ const Hero = () => {
 								<br />
 
 								</Typography>
-								<Typography align="center" variant="h2" style={{color:'white' , fontSize:'70px' ,}}>
+								<Typography align="center" variant="h2" style={{color:'white'  ,}}>
 									Welcome
 									<br />
 								</Typography>
@@ -81,11 +81,11 @@ const Hero = () => {
 								<Grid container justify="center" style={styles.heroButtons}>
 									<Grid item>
 										<Button
+										href='/contactus'
 											variant="contained"
 											style={{ backgroundColor: '#ffd600', marginRight: '10px', color: 'black' }}
-											onClick={toggleTheme}
 										>
-											Toggle Theme
+											Contact Us
 										</Button>
 									</Grid>
 									<Grid item>
@@ -94,6 +94,19 @@ const Hero = () => {
 										</Button>
 									</Grid>
 								</Grid>
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+									<br />
+									<br />
+									<br />
+
 							</Container>
 						</Parallax>
 					</div>

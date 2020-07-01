@@ -18,6 +18,7 @@ import {
 } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import TestimonialGrid from "../../layout/home/TestimonialGrid";
+import { Parallax } from "react-parallax";
 
 const CateringScreen = () => {
   return (
@@ -41,7 +42,7 @@ const CateringScreen = () => {
             color: "white",
           },
           cardMedia: {
-            paddingTop: "56.25%", // 16:9
+            paddingTop: "56.25%",
           },
           socialIcon: {
             color: "white",
@@ -50,13 +51,16 @@ const CateringScreen = () => {
         };
         return (
           <>
-            <div
-              style={{
-                backgroundImage: `url(${require("../../../assets/heroimage.jpeg")}) `,
-                paddingTop: "60px",
-              }}
-            >
+           <Parallax
+							blur={2}
+							bgImage={require('../../../assets/concept3.jpeg')}
+              bgImageAlt="the cat"
+              style={{padding:'60px' , height:'auto'}}
+							strength={600}
+						>
               <Container
+
+                  elevation={4}
                 style={{ flex: 10, backgroundColor: "transparent" }}
                 maxWidth="sm"
               >
@@ -79,13 +83,13 @@ const CateringScreen = () => {
                 </Typography>
                 <Grid container justify="center" style={styles.heroButtons}>
                   <Grid item>
-                    <Button href="/menu" variant="h3" style={styles.heroButton}>
+                    <Button href="/contactus" variant="h3" style={styles.heroButton}>
                       CONTACT US!
                     </Button>
                   </Grid>
                 </Grid>
               </Container>
-            </div>
+            </Parallax>
             <div
               style={{
                 flex: 10,
@@ -117,6 +121,7 @@ const CateringScreen = () => {
                   md={4}
                 >
                   <Paper
+                  elevation={4}
                     style={{
                       backgroundColor: theme.paper,
                       padding: "20px",
@@ -155,7 +160,8 @@ const CateringScreen = () => {
                   md={4}
                 >
                   <Paper
-                    style={{
+                  elevation={4}
+                  style={{
                       backgroundColor: theme.paper,
                       padding: "20px",
                       margin: "20px",
@@ -193,7 +199,8 @@ const CateringScreen = () => {
                   md={4}
                 >
                   <Paper
-                    style={{
+                  elevation={4}
+                  style={{
                       backgroundColor: theme.paper,
                       padding: "20px",
                       margin: "20px",

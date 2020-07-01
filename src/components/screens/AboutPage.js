@@ -126,8 +126,12 @@ const AboutPage = () => {
                     variant="subtitle1"
                     align="center"
                   >
-                    Come, join us as we continue to celebrate this ode to food.
+                    Come, join us as we continue to celebrate this ode to food.<br/><br/>
+                    <Button variant='contained' href="/contactus" style={{backgroundColor:'green' , color:'white'}}>
+                      CONTACT US!
+                    </Button>
                   </Typography>
+                  
                 </div>
               </Paper>
               <Container
