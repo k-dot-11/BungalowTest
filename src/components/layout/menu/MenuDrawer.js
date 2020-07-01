@@ -17,9 +17,10 @@ const MenuDrawer = () => {
 	const { isLightTheme, dark, light } = useContext(ThemeContext);
 	const theme = isLightTheme ? light : dark;
 	return (
-		<Hidden smDown>
+		<Hidden smDown style={{backgroundColor:theme.paper}}>
 			<Drawer
 				variant="permanent"
+				style={{backgroundColor:theme.paper}}
 				
 			>
 				<Toolbar style={{backgroundColor:theme.paper}}/>
@@ -28,7 +29,7 @@ const MenuDrawer = () => {
 					style={{
 						flexShrink: 0,
 						backgroundColor: theme.paper,
-						height:'86vh',
+						height:'84vh',
 						width:'240px'
 					}}
 				>

@@ -39,18 +39,36 @@ const Hero = () => {
 							display: 'flex',
 							flexDirection: 'column',
 							justifyContent: 'center',
-							alignItems: 'center'
+							alignItems: 'center',
+							width: '100vw'
 						}}
 					>
 						<Parallax
-							blur={0}
-							bgImage={require('../../../assets/heroimage.jpeg')}
+							blur={2}
+							bgImage={require('../../../assets/herodark.jpeg')}
 							bgImageAlt="the cat"
-							style={{ width: '100vw' }}
-							strength={500}
+							style={{ width: '100vw', height: '90vh' }}
+							strength={600}
 						>
-							<Container style={{ flex: 10, backgroundColor: 'transparent' }} maxWidth="sm">
-								<Typography align="center" variant="h2" style={styles.heroTitle}>
+							<Container
+								style={{ flex: 10,width:'50vw', backgroundColor: 'transparent', marginTop: '9vh' }}
+							>
+								<Typography variant="h1" align='center' style={{color:'white' , fontSize:'73px'}}>
+
+									THE BUNGALOW
+									<br />
+								</Typography>
+								<Typography variant = 'h6' align = 'center' style = {{color:'#EEE' , fontSize:'17px'}}>
+								170A, Fatehpura Rd, New Fatehpura, Panchwati, Udaipur
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+
+								</Typography>
+								<Typography align="center" variant="h2" style={{color:'white' , fontSize:'70px' ,}}>
 									Welcome
 									<br />
 								</Typography>

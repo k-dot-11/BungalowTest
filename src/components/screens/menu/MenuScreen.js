@@ -60,7 +60,7 @@ const MenuScreen = () => {
 				<AppBar
 					className={classes.appBar}
 					position={'sticky'}
-					style={{ top: '56px', left: '0px', right: '0px', backgroundColor: 'tomato' }}
+					style={{ top: '64px', left: '0px', right: '0px', backgroundColor: 'tomato' }}
 				>
 					<Tabs
 						value={value}
