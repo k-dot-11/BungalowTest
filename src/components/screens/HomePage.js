@@ -1,20 +1,5 @@
 import React from 'react';
-import {
-	Button,
-	Link,
-	Grid,
-	Card,
-	CardMedia,
-	CardContent,
-	CardActions,
-	Container,
-	Paper,
-	Avatar
-} from '@material-ui/core';
-import LocalPizzaIcon from '@material-ui/icons/LocalPizza';
 import Typography from '@material-ui/core/Typography';
-import { Slide } from 'react-slideshow-image';
-
 import Hero from '../layout/home/Hero';
 import TestimonialGrid from '../layout/home/TestimonialGrid';
 import OdeToFood from '../layout/home/OdeToFood';
@@ -32,8 +17,9 @@ const HomePage = () => {
 				const theme = isLightTheme ? light : dark;
 
 				return (
-					<div style={{ display: 'flex', flexDirection: 'column' }}>
+					<div style={{ display: 'flex', flexDirection: 'column' , width: '100vw' , backgroundColor: theme.bg}}>
 						<Hero />
+					
 
 						<OdeToFood />
 
@@ -51,26 +37,27 @@ const HomePage = () => {
 
 							<ImageSlider />
 
-							<PartyAndCatering />
+							<PartyAndCatering xs={12} sm={12} />
 
 							<div
 								style={{
 									marginTop: '67px',
 									display: 'flex',
 									flexDirection: 'column',
-									alignItems: 'center'
+									alignItems: 'center',
+									padding:'30px'
 								}}
 							>
 								<Typography variant="h2" align="center" style={{ color: theme.primary }}>
 									Testimonials
 								</Typography>
-								<Typography variant="subtitle2" style={{ color: theme.syntax }}>
+								<Typography variant="subtitle2" align="center"  style={{ color: theme.syntax }}>
 									<br />
 									<br />
 									The love and the kind words of appreciation is really the secret ingredient of our
 									success and the key reason for us to comeback.
 								</Typography>
-									<TestimonialGrid />
+								<TestimonialGrid />
 							</div>
 						</div>
 						<FooterBungalow />
@@ -106,34 +93,4 @@ const HomePage = () => {
 
 export default HomePage;
 
-{
-	/* {	<Grid container>
-					{cards.map((card) => (
-						<Grid item key={card} xs={8} sm={6} md={3}>
-							<Card style={{ margin: '15px', backgroundColor: '#444444' }}>
-								<CardMedia
-									image="https://source.unsplash.com/1600x900/?restaurant"
-									title="Image title"
-									style={styles.cardMedia}
-								/>
-								<CardContent>
-									<Typography gutterBottom variant="h5" component="h2" style={{ color: 'white' }}>
-										Heading
-									</Typography>
-									<Typography style={{ color: 'lightgrey' }}>
-										This is a media card. You can use this section to describe the content.
-									</Typography>
-								</CardContent>
-								<CardActions>
-									<Button size="small" color="secondary">
-										View
-									</Button>
-									<Button size="small" color="secondary">
-										Edit
-									</Button>
-								</CardActions>
-							</Card>
-						</Grid>
-					))}
-				</Grid> } */
-}
+

@@ -22,8 +22,8 @@ function TabPanel(props) {
 		<div
 			role="tabpanel"
 			hidden={value !== index}
-			id={`simple-tabpanel-${index}`}
-			aria-labelledby={`simple-tab-${index}`}
+			id={`scrollable-force-tabpanel-${index}`}
+			aria-labelledby={`scrollable-force-tab-${index}`}
 			{...other}
 		>
 			{children}
@@ -51,36 +51,86 @@ const MenuScreen = () => {
 			style={{
 				display: 'flex',
 				flexDirection: 'column',
-				width: '99vw',
+				width: '100vw',
 				backgroundColor: theme.bg,
 				minHeight: 'sm'
 			}}
 		>
-			<AppBar className={classes.appBar} position={'sticky'} style={{top:'56px',left:'0px',right:'0px', backgroundColor: 'tomato' }}>
-				<Tabs value={value} onChange={handleChange} centered aria-label="simple tabs example">
-					<Tab label="Main Course (Veg)" />
-					<Tab label="Beverages" />
-					<Tab label="Starters" />
-					<Tab label="Breads" />
-					<Tab label="Desserts" />
-				</Tabs>
-			</AppBar>
-			<MenuDrawer />
-			<TabPanel value={value} index={0}>
-				<MenuGrid name="MainCourse" image="curry" />
-			</TabPanel>
-			<TabPanel value={value} index={1}>
-				<MenuGrid name="Bar" image="drinks" />
-			</TabPanel>
-			<TabPanel value={value} index={2}>
-				<MenuGrid name="Starters" image="salad" />
-			</TabPanel>
-			<TabPanel value={value} index={3}>
-				<MenuGrid name="Breads" image="chapati" />
-			</TabPanel>
-			<TabPanel value={value} index={4}>
-				<MenuGrid name="Desserts" image="dessert" />
-			</TabPanel>
+			<Hidden smDown>
+				<AppBar
+					className={classes.appBar}
+					position={'sticky'}
+					style={{ top: '56px', left: '0px', right: '0px', backgroundColor: 'tomato' }}
+				>
+					<Tabs
+						value={value}
+						onChange={handleChange}
+						centered
+						aria-label="simple tabs example"
+					
+					>
+						<Tab label="Main Course (Veg)" />
+						<Tab label="Beverages" />
+						<Tab label="Starters" />
+						<Tab label="Breads" />
+						<Tab label="Desserts" />
+					</Tabs>
+				</AppBar>
+				<MenuDrawer />
+				<TabPanel value={value} index={0}>
+					<MenuGrid name="MainCourse" image="curry" />
+				</TabPanel>
+				<TabPanel value={value} index={1}>
+					<MenuGrid name="Bar" image="drinks" />
+				</TabPanel>
+				<TabPanel value={value} index={2}>
+					<MenuGrid name="Starters" image="salad" />
+				</TabPanel>
+				<TabPanel value={value} index={3}>
+					<MenuGrid name="Breads" image="chapati" />
+				</TabPanel>
+				<TabPanel value={value} index={4}>
+					<MenuGrid name="Desserts" image="dessert" />
+				</TabPanel>
+			</Hidden>
+			<Hidden mdUp>
+				<AppBar
+					className={classes.appBar}
+					position={'sticky'}
+					style={{ top: '56px', left: '0px', right: '0px', backgroundColor: 'tomato' }}
+				>
+					<Tabs
+						value={value}
+						onChange={handleChange}
+						centered
+						aria-label="simple tabs example"
+						variant="scrollable"
+						scrollButtons="auto"
+					>
+						<Tab label="Main Course (Veg)" />
+						<Tab label="Beverages" />
+						<Tab label="Starters" />
+						<Tab label="Breads" />
+						<Tab label="Desserts" />
+					</Tabs>
+				</AppBar>
+				<MenuDrawer />
+				<TabPanel value={value} index={0}>
+					<MenuGrid name="MainCourse" image="curry" />
+				</TabPanel>
+				<TabPanel value={value} index={1}>
+					<MenuGrid name="Bar" image="drinks" />
+				</TabPanel>
+				<TabPanel value={value} index={2}>
+					<MenuGrid name="Starters" image="salad" />
+				</TabPanel>
+				<TabPanel value={value} index={3}>
+					<MenuGrid name="Breads" image="chapati" />
+				</TabPanel>
+				<TabPanel value={value} index={4}>
+					<MenuGrid name="Desserts" image="dessert" />
+				</TabPanel>
+			</Hidden>
 			<FooterBungalow />
 		</div>
 	);

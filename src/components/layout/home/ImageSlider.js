@@ -19,7 +19,7 @@ const ImageSlider = () => {
 	};
 
 	return (
-		<div style={{ width: '60vw' }}>
+		<div style={{ width: '70vw' }}>
 			<Fade {...properties}>
 				<div
 					style={{
@@ -28,7 +28,7 @@ const ImageSlider = () => {
 						textAlign: 'center'
 					}}
 				>
-					<div style={{ backgroundImage: `url(${images[1]})`, height: '500px' }} />
+					<img src={images[1]} style={{  width: '100vw' , height: 'auto' , maxHeight:'600px'}} />
 				</div>
 				<div
 					style={{
@@ -37,7 +37,7 @@ const ImageSlider = () => {
 						textAlign: 'center'
 					}}
 				>
-					<div style={{ backgroundImage: `url(${images[2]})`, height: '500px' }} />
+					<img src={images[2]} style={{  width: '100vw' , height: 'auto' , maxHeight:'600px'}} />
 				</div>
 				<div
 					style={{
@@ -46,7 +46,7 @@ const ImageSlider = () => {
 						textAlign: 'center'
 					}}
 				>
-					<div style={{ backgroundImage: `url(${images[0]})`, height: '500px' }} />
+					<img src={images[0]} style={{  width: '100vw' , height: 'auto' , maxHeight:'600px'}} />
 				</div>
 			</Fade>
 		</div>

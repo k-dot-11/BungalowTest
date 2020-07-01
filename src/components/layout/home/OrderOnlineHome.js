@@ -11,8 +11,6 @@ const OrderOnlineHome = () => {
 				return (
 					<Container
 						style={{
-							flex: 10,
-							padding: '100px',
 							display: 'flex',
 							alignItems: 'center',
 							justifyContent: 'center',
@@ -23,7 +21,7 @@ const OrderOnlineHome = () => {
 							elevation={3}
 							style={{
 								backgroundColor: theme.paper,
-								padding: '30px',
+								padding: '50px',
 								display: 'flex',
 								alignItems: 'center',
 								justifyContent: 'center',
@@ -46,7 +44,7 @@ const OrderOnlineHome = () => {
 							<br />
 							<Button
 								size="large"
-								href="/signin"
+								href="/concepthome"
 								variant="outlined"
 								style={{ color: theme.primary, borderColor: theme.primary }}
 							>

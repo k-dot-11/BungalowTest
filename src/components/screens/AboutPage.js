@@ -1,5 +1,6 @@
 import React from "react";
 import { ThemeContext } from "../../contexts/ThemeContext";
+import { Parallax, Background } from 'react-parallax';
 import OdeToFood from "../layout/home/OdeToFood";
 import FooterBungalow from "../layout/home/FooterBungalow";
 import {
@@ -36,19 +37,36 @@ const AboutPage = () => {
                 flexDirection: "column",
               }}
             >
+             
               <Paper
                 xs={12} md={8} 
                 elevation={4}
                 style={{
                   display: "flex",
                   flexDirection: "column",
+                  
+                  backgroundColor:theme.primary
                 }}
               >
+
+<Hidden mdUp>
+                      <img
+                        style={{
+                          margin: "60px 40px 20px",
+                          float: "right",
+                          alignSelf: "center",
+                          justifySelf: "center",
+                        }}
+                        src="https://www.utsavvegetarian.com/wp-content/uploads/2019/01/utsav-ws.jpg"
+                        width="370vw"
+                        height="auto"
+                      />
+                  </Hidden>
                 <div
                   style={{
                     flex: 1,
                     backgroundColor: "tomato",
-                    width: "61vw",
+                    width: "90vw",
                   }}
                 >
                   {" "}
@@ -67,6 +85,7 @@ const AboutPage = () => {
                       />
                     </div>
                   </Hidden>
+                  
                   <Typography
                     style={{
                       color: "white",
@@ -127,6 +146,7 @@ const AboutPage = () => {
                     backgroundColor: theme.paper,
                     padding: "30px",
                     display: "flex",
+                    width:'80vw',
                     alignItems: "center",
                     justifyContent: "center",
                     flexDirection: "column",
@@ -155,12 +175,23 @@ const AboutPage = () => {
                     </Typography>
                   </div>
                   <br />
+                  <Hidden mdUp>
+                  <img
+                    style={{ borderRadius: 15 }}
+                    src="https://www.utsavvegetarian.com/wp-content/uploads/2019/12/team-1200x769.jpg"
+                    width="400vw"
+                    height="auto"
+                  />
+                  </Hidden>
+                   <Hidden smDown>
                   <img
                     style={{ borderRadius: 15 }}
                     src="https://www.utsavvegetarian.com/wp-content/uploads/2019/12/team-1200x769.jpg"
                     width="90%"
                     height="auto"
                   />
+                  </Hidden>
+
                 </Paper>
               </Container>
 
@@ -172,7 +203,7 @@ const AboutPage = () => {
                 Testimonials
               </Typography>
               <hr width="60px" height="4px" />
-              <Typography variant="subtitle2" style={{ color: theme.syntax }}>
+              <Typography variant="subtitle2" align='center' style={{ color: theme.syntax }}>
                 <br />
                 <br />
                 The love and the kind words of appreciation is really the secret
