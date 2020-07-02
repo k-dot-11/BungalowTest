@@ -100,7 +100,7 @@ const MenuGrid = (props) => {
 										<Typography variant='body1' style={{color:theme.syntax}}>Description</Typography>
 									</AccordionSummary>
 									<AccordionDetails>
-										<Typography>
+										<Typography style={{color:theme.syntax}}>
 										{item.description}
 										</Typography>
 									</AccordionDetails>
