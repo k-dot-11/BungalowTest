@@ -13,6 +13,7 @@ import ThemeContextProvider from './contexts/ThemeContext';
 import CateringScreen from './components/screens/menu/CateringScreen';
 import ConceptHome from './components/screens/concept/ConceptHome';
 import ContactUs from './components/screens/ContactUs';
+import OrderOnlinePage from './components/screens/orderonlinescreens/OrderOnlinePage';
 import CateringOrParty from './components/screens/CateringOrParty';
 
 function App() {
@@ -49,6 +50,9 @@ function App() {
 							</Route>
 							<Route path="/cateringorparty">
 								<CateringOrParty />
+							</Route>
+							<Route path="/orderonline">
+								<OrderOnlinePage />
 							</Route>
 							<Route path="/">
 								<HomePage />

@@ -1,18 +1,10 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 
-import { Drawer, Tabs, Tab, AppBar, Toolbar, makeStyles, Hidden } from '@material-ui/core';
-import { firestore } from '../../../firebase/firebase';
+import { Tabs, Tab, AppBar, makeStyles, Hidden } from '@material-ui/core';
 import { ThemeContext } from '../../../contexts/ThemeContext';
 import MenuGrid from '../../layout/menu/MenuGrid';
 import FooterBungalow from '../../layout/home/FooterBungalow';
-import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+
 import MenuDrawer from '../../layout/menu/MenuDrawer';
 
 function TabPanel(props) {
@@ -68,7 +60,6 @@ const MenuScreen = () => {
 						indicatorColor="white"
 						centered
 						aria-label="simple tabs example"
-					
 					>
 						<Tab label="Main Course (Veg)" />
 						<Tab label="Beverages" />
