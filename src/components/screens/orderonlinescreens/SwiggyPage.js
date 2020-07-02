@@ -14,11 +14,11 @@ const SwiggyPage = () => {
 				backgroundColor: theme.bg
 			}}
 		>
-			<Hidden smDown>
+			<div style={{display:'flex',justifyContent: 'center',backgroundColor:'#FC9019'}}>
 			<img
-			src={require('../../../assets/swiggy.png')}
+			src={require('../../../assets/swiggyalt.png')}
 				style={{
-					width: '100vw',
+					width: 'auto',
 					height: '500px',
 					backgroundImage: `url(${require('../../../assets/swiggy.png')})`,
 					display: 'flex',
@@ -27,7 +27,10 @@ const SwiggyPage = () => {
 					justifyContent: 'center'
 				}}
 			/>
-			</Hidden>
+			</div>
+			<br/>
+			<br/>
+			<br/>
 			<Button
 				variant="contained"
 				href="https://www.swiggy.com/restaurants/the-bungalow-epip-zone-whitefield-bangalore-1359"
@@ -35,6 +38,9 @@ const SwiggyPage = () => {
 			>
 				Order on Swiggy
 			</Button>
+			<br/>
+			<br/>
+			<br/>
 
 			<FooterBungalow />
 		</div>

@@ -12,9 +12,11 @@ class ThemeContextProvider extends Component {
       bg: "#eee",
       footerColor: "tomato",
       primary: "tomato",
+      main:'white'
     },
     dark: {
       syntax: "#ddd",
+      main:'black',
       bg: "#252522",
       paper: "#444",
       title: "#ffffff",
