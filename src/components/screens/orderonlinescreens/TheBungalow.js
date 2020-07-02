@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography, Button } from "@material-ui/core";
+import { Grid, Typography, Button, Hidden } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
 const TheBungalow = () => {
@@ -28,13 +28,24 @@ const TheBungalow = () => {
           ></img>
         </Grid>
         <Grid item xs={12}>
-          <Typography
-            variant="h1"
-            align="center"
-            style={{ color: "tomato", fontWeight: "400" }}
-          >
-            COMING SOON!
-          </Typography>
+          <Hidden smDown>
+            <Typography
+              variant="h1"
+              align="center"
+              style={{ color: "tomato", fontWeight: "400" }}
+            >
+              COMING SOON!
+            </Typography>
+          </Hidden>{" "}
+          <Hidden mdUp>
+            <Typography
+              variant="h2"
+              align="center"
+              style={{ color: "tomato", fontWeight: "500" }}
+            >
+              COMING SOON!
+            </Typography>
+          </Hidden>
         </Grid>
         <Grid item xs={12}>
           <Typography align="center" variant="h5">
@@ -51,7 +62,7 @@ const TheBungalow = () => {
         >
           <Button
             style={{
-              margin: "25px",
+              margin: "2%",
               color: "tomato",
               backgroundColor: "#FFF",
             }}
@@ -65,7 +76,7 @@ const TheBungalow = () => {
 
           <Button
             style={{
-              margin: "25px",
+              margin: "2%",
               backgroundColor: "#FFF",
               color: "tomato",
             }}
