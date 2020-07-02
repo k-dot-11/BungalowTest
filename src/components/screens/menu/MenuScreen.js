@@ -65,6 +65,7 @@ const MenuScreen = () => {
 					<Tabs
 						value={value}
 						onChange={handleChange}
+						indicatorColor="white"
 						centered
 						aria-label="simple tabs example"
 					
