@@ -48,16 +48,17 @@ const AboutPage = () => {
                   backgroundColor:theme.primary
                 }}
               >
-
 <Hidden mdUp>
+ 
                       <img
                         style={{
                           margin: "60px 40px 20px",
                           float: "right",
                           alignSelf: "center",
                           justifySelf: "center",
+                          borderColor:'white'
                         }}
-                        src="https://www.utsavvegetarian.com/wp-content/uploads/2019/01/utsav-ws.jpg"
+                        src={require('../../assets/aboutimagefirst.jpeg')}
                         width="370vw"
                         height="auto"
                       />
@@ -79,7 +80,7 @@ const AboutPage = () => {
                           alignSelf: "center",
                           justifySelf: "center",
                         }}
-                        src="https://www.utsavvegetarian.com/wp-content/uploads/2019/01/utsav-ws.jpg"
+                        src={require('../../assets/aboutimagefirst.jpeg')}
                         width="475vw"
                         height="auto"
                       />
@@ -181,16 +182,16 @@ const AboutPage = () => {
                   <br />
                   <Hidden mdUp>
                   <img
-                    style={{ borderRadius: 15 }}
-                    src="https://www.utsavvegetarian.com/wp-content/uploads/2019/12/team-1200x769.jpg"
+                    style={{ borderRadius: 15 ,}}
+                    src={require('../../assets/aboutam.jpg')}
                     width="400vw"
                     height="auto"
                   />
                   </Hidden>
                    <Hidden smDown>
                   <img
-                    style={{ borderRadius: 15 }}
-                    src="https://www.utsavvegetarian.com/wp-content/uploads/2019/12/team-1200x769.jpg"
+                    style={{ borderRadius: 15 }}                    src={require('../../assets/aboutam.jpg')}
+
                     width="90%"
                     height="auto"
                   />
