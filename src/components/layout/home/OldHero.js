@@ -43,7 +43,7 @@ const OldHero = () => {
 						}}
 					>
 						<Parallax
-							blur={0}
+							blur={2}
 							bgImage={require('../../../assets/herodark.jpeg')}
 							bgImageAlt="the cat"
 							style={{ width: '100vw' }}

@@ -55,13 +55,13 @@ const CateringScreen = () => {
 							blur={2}
 							bgImage={require('../../../assets/concept3.jpeg')}
               bgImageAlt="the cat"
-              style={{padding:'60px' , height:'auto'}}
+              style={{padding:'60px' , height:'auto' ,}}
 							strength={600}
 						>
               <Container
 
                   elevation={4}
-                style={{ flex: 10, backgroundColor: "transparent" }}
+                style={{ flex: 10}}
                 maxWidth="sm"
               >
                 <Typography
@@ -94,6 +94,7 @@ const CateringScreen = () => {
               style={{
                 flex: 10,
                 backgroundColor: theme.bg,
+                width:'100vw',
                 paddingTop: "40px",
                 alignItems: "center",
                 justifyContent: "center",
@@ -236,7 +237,7 @@ const CateringScreen = () => {
                   flex: 1,
                   marginBottom: "50px",
                   backgroundColor: "tomato",
-                  width: "61vw",
+                  width: "76vw",
                 }}
               >
                 {" "}
@@ -316,7 +317,7 @@ const CateringScreen = () => {
                     /> */}
                 </div>
                 <Typography
-                  style={{ color: "white", padding: "30px" }}
+                  style={{ color: "white", padding: "30px", fontSize:'18px' }}
                   variant="subtitle1"
                   align="justify"
                 >
@@ -339,7 +340,7 @@ const CateringScreen = () => {
                 Testimonials
               </Typography>
               <hr width="60px" height="4px" />
-              <Typography variant="subtitle2" style={{ color: theme.syntax }}>
+              <Typography variant="subtitle2" align='center' style={{ color: theme.syntax }}>
                 <br />
                 <br />
                 The love and the kind words of appreciation is really the secret

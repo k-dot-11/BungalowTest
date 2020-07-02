@@ -28,7 +28,10 @@ const ImageSlider = () => {
 						textAlign: 'center'
 					}}
 				>
-					<img src={images[1]} style={{  width: '100vw' , height: 'auto' , maxHeight:'600px'}} />
+					<img
+						src={require('../../../assets/carousel1.jpeg')}
+						style={{ width: '100vw', height: 'auto', maxHeight: '600px' }}
+					/>
 				</div>
 				<div
 					style={{
@@ -37,7 +40,10 @@ const ImageSlider = () => {
 						textAlign: 'center'
 					}}
 				>
-					<img src={images[2]} style={{  width: '100vw' , height: 'auto' , maxHeight:'600px'}} />
+					<img
+						src={require('../../../assets/carousel2.jpeg')}
+						style={{ width: '100vw', height: 'auto', maxHeight: '600px' }}
+					/>
 				</div>
 				<div
 					style={{
@@ -46,7 +52,10 @@ const ImageSlider = () => {
 						textAlign: 'center'
 					}}
 				>
-					<img src={images[0]} style={{  width: '100vw' , height: 'auto' , maxHeight:'600px'}} />
+					<img
+						src={require('../../../assets/carousel3.png')}
+						style={{ width: '100vw', height: 'auto', maxHeight: '600px' }}
+					/>
 				</div>
 			</Fade>
 		</div>

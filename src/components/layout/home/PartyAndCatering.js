@@ -8,7 +8,7 @@ import {
 } from "@material-ui/core";
 import { ThemeContext } from "../../../contexts/ThemeContext";
 import "./style.css";
-
+import MobileCatering from "./MobileCatering";
 const PartyAndCatering = () => {
   return (
     <ThemeContext.Consumer>
@@ -28,6 +28,7 @@ const PartyAndCatering = () => {
             xs={12}
             sm={12}
           >
+            <Hidden smDown>
             <div
               xs={12}
               sm={6}
@@ -58,7 +59,7 @@ const PartyAndCatering = () => {
               </div>
               <div
                 className="content-party"
-                style={{ padding: "45px", transition: "0.5s" }}
+                style={{ padding: "45px", transition: "0.5s" , display: "flex" , flexDirection: "column" , alignItems: "center"}}
               >
                 <Hidden mdUp>
                   <img
@@ -95,7 +96,7 @@ const PartyAndCatering = () => {
                   variant="contained"
                   size="large"
                   style={{
-                    justifySelf: "center",
+                    alignSelf: "center",
                     color: theme.primary,
                     backgroundColor: "white",
                     marginTop: "30px",
@@ -178,7 +179,12 @@ const PartyAndCatering = () => {
                 </div>
               </Hidden>
             </div>
+            </Hidden>
+            <Hidden mdUp>
+              <MobileCatering/>
+            </Hidden>
           </Paper>
+
         );
       }}
     </ThemeContext.Consumer>

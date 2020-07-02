@@ -68,19 +68,22 @@ const OrderOnlinePage = () => {
           centered
           aria-label="simple tabs example"
         >
-          <Tab label="The Bungalow" />
-          <Tab label="Zomato" />
+              <Tab label="Zomato" />
           <Tab label="Swiggy" />
+          <Tab label="The Bungalow" />
+      
         </Tabs>
       </AppBar>
+    
       <TabPanel value={value} index={0}>
-        <TheBungalow />
-      </TabPanel>
-      <TabPanel value={value} index={1}>
         <ZomatoPage />
       </TabPanel>
-      <TabPanel value={value} index={2}>
+     
+      <TabPanel value={value} index={1}>
         <SwiggyPage />
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        <TheBungalow />
       </TabPanel>
     </div>
   );

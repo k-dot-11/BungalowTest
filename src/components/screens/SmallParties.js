@@ -1,12 +1,21 @@
-import React from 'react'
-import PartyHome from '../layout/smallparties/PartyHome'
-
+import React from 'react';
+import PartyHome from '../layout/smallparties/PartyHome';
+import FooterBungalow from '../layout/home/FooterBungalow';
 const SmallParties = () => {
-    return (
-        <div style = {{display: 'flex' , justifyContent: 'center' , padding:'30px'}}>
-            <PartyHome/>
-        </div>
-    )
-}
+	return (
+		<div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
+            <br/>
+            <br/>
+            <div style={{display:'flex' , justifyContent: 'center'}}>
+			<PartyHome />
+            <br/>
+            </div>
+            <br/>
+            <br/>
 
-export default SmallParties
+			<FooterBungalow />
+		</div>
+	);
+};
+
+export default SmallParties;

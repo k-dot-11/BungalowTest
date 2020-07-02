@@ -154,7 +154,7 @@ const Navbar = () => {
                 button
                 style={{ color: theme.syntax }}
                 component="a"
-                href="https://www.zomato.com/udaipur/the-bungalow-udaipur-panchwati"
+                href="/orderonline"
               >
                 <ListItemIcon
                   style={{ paddingRight: "20%", paddingLeft: "5%" }}

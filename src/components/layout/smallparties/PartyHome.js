@@ -27,11 +27,10 @@ const PartyHome = () => {
 					}}
 				/>
 				</Hidden>
-				<Typography variant="h2" style={{ color: 'white' , margin:'20px'}}>
+				<Typography variant="h2" align='center' style={{ color: 'white' , margin:'20px'}}>
 					Party @ Home
 				</Typography>
 				<br /> 
-				<br />
 				<Divider style={{ backgroundColor: 'white', }} />
 				<br />
 				<Typography align="justify" variant="body1" style={{ fontSize: '20px', color: 'white' }}>
