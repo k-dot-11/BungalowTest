@@ -93,7 +93,7 @@ const MenuGrid = (props) => {
 
 								<Accordion style={{backgroundColor:theme.paper  }} elevation={0}>
 									<AccordionSummary
-										expandIcon={<ExpandMoreIcon />}
+										expandIcon={<ExpandMoreIcon style={{color:theme.syntax}}/>}
 										aria-controls="panel2a-content"
 										id="panel2a-header"
 									>
