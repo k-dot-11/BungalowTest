@@ -34,7 +34,7 @@ const MenuDrawer = () => {
 					}}
 				>
 					<List>
-						{[ 'STYLING krdi H ISSKI ABHI', 'KHANA', 'KHANA' ].map((text, index) => (
+						{[ 'FILTER NO.1', 'FILTER NO.2', 'FILTER NO.3' ].map((text, index) => (
 							<ListItem button key={text}>
 								<ListItemText primary={text} style = {{color:theme.title}}/>
 							</ListItem>
@@ -42,7 +42,7 @@ const MenuDrawer = () => {
 					</List>
 					<Divider />
 					<List>
-						{[ 'KHANA KHANA', 'KHANA', 'KHANA' ].map((text, index) => (
+						{[ 'SORT BY ...', 'SORT BY ...', 'SORT BY ...' ].map((text, index) => (
 							<ListItem button key={text}>
 								<ListItemText primary={text} style = {{color:theme.syntax}}/>
 							</ListItem>
