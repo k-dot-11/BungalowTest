@@ -15,18 +15,32 @@ const ZomatoPage = () => {
 			}}
 		>
 			<div style={{display:'flex',justifyContent: 'center',backgroundColor:'white'}}>
+				<Hidden smDown>
 			<img
 			src={require('../../../assets/zomatofirst.jpg')}
 				style={{
-					width: 'auto',
-					height: '500px',
-					backgroundImage: `url(${require('../../../assets/zomatofirst.jpg')})`,
+					width: '50vw',
+					height: 'auto',
 					display: 'flex',
 					alignSelf:'center',
 					alignItems: 'center',
 					justifyContent: 'center'
 				}}
 			/>
+			</Hidden>
+			<Hidden mdUp>
+			<img
+			src={require('../../../assets/zomatofirst.jpg')}
+				style={{
+					width: '100vw',
+					height: 'auto',
+					display: 'flex',
+					alignSelf:'center',
+					alignItems: 'center',
+					justifyContent: 'center'
+				}}
+			/>
+			</Hidden>
 			</div>
 			<br/>
 			<br/>

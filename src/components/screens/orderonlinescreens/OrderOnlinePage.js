@@ -46,6 +46,7 @@ const OrderOnlinePage = () => {
       style={{
         display: "flex",
         flexDirection: "column",
+        maxWidth:'100vw',
         width: "100vw",
         backgroundColor: theme.bg,
         minHeight: "sm",
