@@ -35,6 +35,7 @@ const MenuScreen = () => {
 
 	const handleChange = (event, newValue) => {
 		setValue(newValue);
+		window.scrollTo(0,0)
 	};
 	const { isLightTheme, light, dark } = useContext(ThemeContext);
 	const theme = isLightTheme ? light : dark;

@@ -45,6 +45,7 @@ const ZomatoPage = () => {
 			<br/>
 			<br/>
 			<br/>
+			<br/>
 			<Button
 				variant="contained"
 				href="https://www.zomato.com/udaipur/the-bungalow-udaipur-panchwati/menu"
@@ -52,6 +53,7 @@ const ZomatoPage = () => {
 			>
 				Order on Zomato
 			</Button>
+			<br/>
 			<br/>
 			<br/>
 			<br/>
