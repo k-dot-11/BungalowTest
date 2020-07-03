@@ -58,7 +58,7 @@ const AboutPage = () => {
                           justifySelf: "center",
                           borderColor:'white'
                         }}
-                        src={require('../../assets/aboutimagefirst.jpeg')}
+                        src={require('../../assets/aboutcompressed.jpg')}
                         width="370vw"
                         height="auto"
                       />
@@ -80,7 +80,7 @@ const AboutPage = () => {
                           alignSelf: "center",
                           justifySelf: "center",
                         }}
-                        src={require('../../assets/aboutimagefirst.jpeg')}
+                        src={require('../../assets/aboutcompressed.jpg')}
                         width="475vw"
                         height="auto"
                       />

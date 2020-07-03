@@ -45,7 +45,7 @@ const Hero = () => {
 					>
 						<Parallax
 							blur={2}
-							bgImage={require('../../../assets/herodark.jpeg')}
+							bgImage={require('../../../assets/herocompressed.jpg')}
 							bgImageAlt="the cat"
 							style={{ width: '100vw', height: 'auto' }}
 							strength={600}
