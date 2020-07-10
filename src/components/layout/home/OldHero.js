@@ -1,5 +1,5 @@
 import React from 'react';
-import { Parallax, Background } from 'react-parallax';
+import { Parallax, } from 'react-parallax';
 import { Container, Typography, Grid, Button } from '@material-ui/core';
 import { ThemeContext } from '../../../contexts/ThemeContext';
 
@@ -43,11 +43,12 @@ const OldHero = () => {
 						}}
 					>
 						<Parallax
-							blur={2}
-							bgImage={require('../../../assets/herodark.jpeg')}
+							bgImage={require('../../../assets/heroindian.jpg')}
+
+
 							bgImageAlt="the cat"
 							style={{ width: '100vw' }}
-							strength={500}
+							strength={260}
 						>
 							<Container style={{ flex: 10, backgroundColor: 'transparent' }} maxWidth="sm">
 								<Typography variant="h2" align="center" style={{ color: 'white' }}>

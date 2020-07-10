@@ -44,31 +44,26 @@ const Hero = () => {
 						}}
 					>
 						<Parallax
-							blur={2}
-							bgImage={require('../../../assets/herocompressed.jpg')}
+							bgImage={require('../../../assets/heroindian.jpg')}
 							bgImageAlt="the cat"
-							style={{ width: '100vw', height: 'auto' }}
-							strength={600}
+							style={{ width: '100vw' }}
+							strength={500}
 						>
 							<Container
-								style={{ flex: 10,width:'50vw', backgroundColor: 'transparent', marginTop: '15vh' }}
+								style={{ flex: 10, width: '50vw', backgroundColor: 'transparent', marginTop: '15vh' }}
 							>
-								<Typography variant="h1" align='center' style={{color:'white' , }}>
-
+								<Typography variant="h1" align="center" style={{ color: 'white' }}>
 									THE BUNGALOW
 									<br />
 								</Typography>
-								<Typography variant = 'h6' align = 'center' style = {{color:'#EEE' , fontSize:'17px'}}>
-								170A, Fatehpura Rd, New Fatehpura, Panchwati, Udaipur
-								<br />
-								<br />
-								<br />
-								<br />
-								<br />
-								<br />
-
+								<Typography variant="h6" align="center" style={{ color: '#EEE', fontSize: '17px' }}>
+									170A, Fatehpura Rd, New Fatehpura, Panchwati, Udaipur
+									<br />
+									<br />
+									<br />
+									<br />
 								</Typography>
-								<Typography align="center" variant="h2" style={{color:'white'  ,}}>
+								<Typography align="center" variant="h2" style={{ color: 'white' }}>
 									Welcome
 									<br />
 								</Typography>
@@ -81,7 +76,7 @@ const Hero = () => {
 								<Grid container justify="center" style={styles.heroButtons}>
 									<Grid item>
 										<Button
-										href='/contactus'
+											href="/contactus"
 											variant="contained"
 											style={{ backgroundColor: '#ffd600', marginRight: '10px', color: 'black' }}
 										>
@@ -103,10 +98,9 @@ const Hero = () => {
 								<br />
 								<br />
 								<br />
-									<br />
-									<br />
-									<br />
-
+								<br />
+								<br />
+								<br />
 							</Container>
 						</Parallax>
 					</div>

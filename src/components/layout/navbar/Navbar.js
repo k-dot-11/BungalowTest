@@ -216,15 +216,17 @@ const Navbar = () => {
             backgroundColor: theme.primary,
             flex: 1,
             width: "100vw",
+            
           },
 
           appBarTitle: {
             textAlign: "left",
             flex: 1,
-            fontSize: "20px",
+            fontSize: "25px",
           },
 
           cameraIcon: {
+            marginLeft:'40px',
             marginRight: "10px",
           },
 
@@ -234,6 +236,7 @@ const Navbar = () => {
           },
 
           loginButton: {
+            marginRight:'30px',
             marginLeft: "15px",
             borderColor: "white",
             borderWidth: "1/2px",
