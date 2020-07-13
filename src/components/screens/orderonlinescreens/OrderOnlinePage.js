@@ -69,22 +69,25 @@ const OrderOnlinePage = () => {
           centered
           aria-label="simple tabs example"
         >
-              <Tab label="Zomato" />
-          <Tab label="Swiggy" />
-          <Tab label="The Bungalow" />
+          <Tab label='The Bungalow'/>
+          <Tab label="Swiggy" onClick={()=> window.open("https://www.swiggy.com/restaurants/the-bungalow-epip-zone-whitefield-bangalore-1359", "_blank")}/>
+          <Tab label="Zomato" onClick={()=> window.open("https://www.zomato.com/udaipur/the-bungalow-udaipur-panchwati/menu", "_blank")}/>
+
       
         </Tabs>
       </AppBar>
     
       <TabPanel value={value} index={0}>
-        <ZomatoPage />
+      <TheBungalow />
+
       </TabPanel>
      
       <TabPanel value={value} index={1}>
         <SwiggyPage />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <TheBungalow />
+        <ZomatoPage />
+
       </TabPanel>
     </div>
   );

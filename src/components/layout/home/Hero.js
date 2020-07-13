@@ -44,10 +44,10 @@ const Hero = () => {
             }}
           >
             <Parallax
-              bgImage={require("../../../assets/herocheck1.jpg")}
+              bgImage={require("../../../assets/heronewresized.jpg")}
               bgImageAlt="the cat"
               style={{ width: "100vw" }}
-              strength={300}
+              strength={600}
             >
               <Container
                 style={{
