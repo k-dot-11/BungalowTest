@@ -10,6 +10,7 @@ import FooterBungalow from "../layout/home/FooterBungalow";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import OldHero from "../layout/home/OldHero";
 import { Hidden } from "@material-ui/core";
+import NewParty from "../layout/home/NewParty";
 
 const HomePage = () => {
   return (
@@ -51,7 +52,7 @@ const HomePage = () => {
 
               <ImageSlider />
 
-              <PartyAndCatering xs={12} sm={12} />
+              <NewParty xs={12} sm={12} />
 
               <div
                 style={{

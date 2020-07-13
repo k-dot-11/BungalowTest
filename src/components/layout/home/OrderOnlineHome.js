@@ -10,6 +10,10 @@ const OrderOnlineHome = () => {
 				const theme = isLightTheme ? light : dark;
 				return (
 					<Container
+					maxWidth='md'
+					xs={12}
+					sm={12}
+					md={4}
 						style={{
 							display: 'flex',
 							alignItems: 'center',

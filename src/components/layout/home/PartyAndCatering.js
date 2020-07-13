@@ -17,7 +17,7 @@ const PartyAndCatering = () => {
         const theme = isLightTheme ? light : dark;
         return (
           <Paper
-          elevation={0}
+          elevation={4}
             style={{
               display: "flex",
               flexDirection: "column",

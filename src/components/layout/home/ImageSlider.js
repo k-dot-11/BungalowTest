@@ -1,5 +1,6 @@
 import { Fade } from 'react-slideshow-image';
 import React from 'react';
+import { Container } from '@material-ui/core';
 
 const ImageSlider = () => {
 	const images = [
@@ -12,17 +13,18 @@ const ImageSlider = () => {
 		duration: 3000,
 		transitionDuration: 500,
 		infinite: true,
+		arrows: false,
 		indicators: true,
-		arrows: true,
 		pauseOnHover: true,
 		onChange: (oldIndex, newIndex) => {}
 	};
 
 	return (
-		<div style={{ width: '70vw' }}>
-			<Fade {...properties}>
+		<Container  maxWidth='md'>
+			<Fade {...properties} >
 				<div
 					style={{
+						alignItems: 'center',
 						padding: '20px',
 						fontSize: '20px',
 						textAlign: 'center'
@@ -58,7 +60,7 @@ const ImageSlider = () => {
 					/>
 				</div>
 			</Fade>
-		</div>
+		</Container>
 	);
 };
 
