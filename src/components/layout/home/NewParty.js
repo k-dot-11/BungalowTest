@@ -58,10 +58,10 @@ const NewParty = () => {
 						justifyContent: 'center'
 					}}
 				>
-					<Typography style={{ color: 'white' ,fontWeight: 'bold'}} variant="h2" align="center">
-						Small Parties
+					<Typography style={{ color: 'white'}} variant="h2" align="center">
+						Reserve A Table
 					</Typography>
-					<Typography style={{ color: 'white',fontSize:'18px' }} variant="subtitle1" align="justify">
+					<Typography style={{ color: 'white',fontSize:'18px'}} variant="subtitle1" align="justify">
 						<br />
 						<br />
 						For home parties with extended family and friends upto 70 people or for a cosy gathering of 25

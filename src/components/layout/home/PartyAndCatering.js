@@ -141,7 +141,7 @@ const PartyAndCatering = () => {
                   align="center"
                 >
                   <br />
-                  Large Catering
+                  Reserve a table
                 </Typography>
                 <Typography
                   style={{ color: "white" }}
